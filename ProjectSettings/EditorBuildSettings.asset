@@ -6,6 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Game Old/Scenes/Inicio.unity
+    guid: c3d706e4aa372ba469b55189661118d9
+  - enabled: 1
+    path: Assets/Game Old/Scenes/Creacion de mapa.unity
+    guid: c9ef5a767ebedfe46b72e517e4100335
+  - enabled: 1
+    path: Assets/Game Old/Scenes/Dungeon 2.unity
+    guid: 08d3bdc45aa865349837c9e910e87514
+  - enabled: 1
+    path: Assets/Game Old/Scenes/Dungeon 3.unity
+    guid: 67cab0bb3ed8e5f459c8d9675b4b816e
+  - enabled: 1
+    path: Assets/Game Old/Scenes/End Game.unity
+    guid: d6ec51e086c0b9640b4baa2407234e1d
+  - enabled: 1
+    path: Assets/Game Old/Scenes/Game over.unity
+    guid: cb71bcc64f4ee5c44a93fd97aee254a9
   m_configObjects: {}
