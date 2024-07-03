@@ -10,14 +10,17 @@ public class DungeonGenerator : MonoBehaviour
 
     [SerializeField] private Transform roomPrefab; // Prefab original
     [SerializeField] private List<Transform> roomPrefabs; // Lista de otros prefabs de salas
+    [SerializeField] private Transform uniqueRoomPrefab; // Prefab de la sala única
     private float offsetX = 0.5f;
     private float offsetY = 0.5f;
 
     [SerializeField] private Transform world;
     int currentRoom = 0;
+    int uniqueRoomsGenerated = 0;
 
     [Header("Dungeon")]
     [SerializeField] private int roomQuantity;
+    [SerializeField] private int uniqueRoomQuantity = 1; // Cantidad de salas únicas
     Dictionary<Vector2Int, RoomControl> roomAndPos = new Dictionary<Vector2Int, RoomControl>();
 
     void Start()
@@ -44,6 +47,13 @@ public class DungeonGenerator : MonoBehaviour
             if (currentRoom == 0)
             {
                 rc = GenerateRoom(roomPrefab, new Vector2(actualPosition.x * width, actualPosition.y * height));
+                rc.isFirstRoom = true;
+            }
+            else if (uniqueRoomsGenerated < uniqueRoomQuantity && Random.Range(0, remainingRooms) < uniqueRoomQuantity - uniqueRoomsGenerated)
+            {
+                rc = GenerateRoom(uniqueRoomPrefab, new Vector2(actualPosition.x * width, actualPosition.y * height));
+                rc.isUniqueRoom = true;
+                uniqueRoomsGenerated++;
             }
             else
             {

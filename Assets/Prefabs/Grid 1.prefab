@@ -62,11 +62,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a219f4b872b9544ba63441514ab6046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  walls: []
   doors:
   - {fileID: 6467210372720999371}
   - {fileID: 3305806789568309976}
   - {fileID: 4308644938209990946}
   - {fileID: 6032250269305958119}
+  enemySpawner: {fileID: 0}
+  isFirstRoom: 0
+  isUniqueRoom: 0
 --- !u!1 &2145157958981706294
 GameObject:
   m_ObjectHideFlags: 0
@@ -1681,7 +1685,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a219f4b872b9544ba63441514ab6046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  walls: []
   doors: []
+  enemySpawner: {fileID: 0}
+  isFirstRoom: 0
+  isUniqueRoom: 0
 --- !u!1 &6467210372720999371
 GameObject:
   m_ObjectHideFlags: 0

@@ -149,7 +149,15 @@ PrefabInstance:
       objectReference: {fileID: 7151234049885506679, guid: 894a6ff800db345409673d6d764db341, type: 3}
     - target: {fileID: 1994480688899515101, guid: 93fa36e9fd10eae41821be5a1ac90026, type: 3}
       propertyPath: roomQuantity
-      value: 8
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1994480688899515101, guid: 93fa36e9fd10eae41821be5a1ac90026, type: 3}
+      propertyPath: uniqueRoomPrefab
+      value: 
+      objectReference: {fileID: 7151234049885506679, guid: 40156e22b41ac7e479c547d6fc60c65c, type: 3}
+    - target: {fileID: 1994480688899515101, guid: 93fa36e9fd10eae41821be5a1ac90026, type: 3}
+      propertyPath: uniqueRoomQuantity
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1994480688899515101, guid: 93fa36e9fd10eae41821be5a1ac90026, type: 3}
       propertyPath: roomPrefabs.Array.size
