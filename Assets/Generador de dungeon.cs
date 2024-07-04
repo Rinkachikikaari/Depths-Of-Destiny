@@ -11,6 +11,7 @@ public class DungeonGenerator : MonoBehaviour
     [SerializeField] private Transform roomPrefab; // Prefab original
     [SerializeField] private List<Transform> roomPrefabs; // Lista de otros prefabs de salas
     [SerializeField] private Transform uniqueRoomPrefab; // Prefab de la sala única
+    [SerializeField] private Transform bossRoomPrefab; // Prefab de la sala de jefe
     private float offsetX = 0.5f;
     private float offsetY = 0.5f;
 
@@ -67,6 +68,11 @@ public class DungeonGenerator : MonoBehaviour
             currentRoom++;
         }
 
+        // Encontrar la sala más alejada
+        Vector2Int farthestRoomPosition = FindFarthestRoom(usedRooms);
+        // Reemplazar la sala más alejada con la sala de jefe
+        ReplaceWithBossRoom(farthestRoomPosition);
+
         // Configurar puertas para cada sala
         foreach (Vector2Int position in usedRooms)
         {
@@ -107,5 +113,34 @@ public class DungeonGenerator : MonoBehaviour
         parentT.position = roomOffset;
 
         return parentT.GetComponent<RoomControl>();
+    }
+
+    Vector2Int FindFarthestRoom(List<Vector2Int> usedRooms)
+    {
+        Vector2Int startRoom = new Vector2Int(0, 0);
+        Vector2Int farthestRoom = startRoom;
+        float maxDistance = 0;
+
+        foreach (Vector2Int room in usedRooms)
+        {
+            float distance = Vector2Int.Distance(startRoom, room);
+            if (distance > maxDistance)
+            {
+                maxDistance = distance;
+                farthestRoom = room;
+            }
+        }
+
+        return farthestRoom;
+    }
+
+    void ReplaceWithBossRoom(Vector2Int position)
+    {
+        // Destruir la sala original
+        Destroy(roomAndPos[position].gameObject);
+        // Generar la sala de jefe
+        RoomControl bossRoom = GenerateRoom(bossRoomPrefab, new Vector2(position.x * width, position.y * height));
+        // Reemplazar en el diccionario
+        roomAndPos[position] = bossRoom;
     }
 }

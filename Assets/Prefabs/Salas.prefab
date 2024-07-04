@@ -77,11 +77,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c50fcb99c53cbde4f9f2204ea549ab73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 17
-  height: 11
-  roomPrefab: {fileID: 4758963105912410217, guid: 8d74d90bbac0e4c4ebe812c61d4f95eb, type: 3}
+  width: 20
+  height: 12
+  roomPrefab: {fileID: 7151234049885506679, guid: 1d23010f81c372a48bf3c7a9dc6dbfe6, type: 3}
+  roomPrefabs:
+  - {fileID: 7151234049885506679, guid: 894a6ff800db345409673d6d764db341, type: 3}
+  - {fileID: 7151234049885506679, guid: 1d23010f81c372a48bf3c7a9dc6dbfe6, type: 3}
+  uniqueRoomPrefab: {fileID: 7151234049885506679, guid: 40156e22b41ac7e479c547d6fc60c65c, type: 3}
   world: {fileID: 5891784913143359615}
-  roomQuantity: 10
+  roomQuantity: 8
+  uniqueRoomQuantity: 1
 --- !u!1001 &4768945627651150690
 PrefabInstance:
   m_ObjectHideFlags: 0
