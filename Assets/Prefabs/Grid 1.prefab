@@ -62,15 +62,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a219f4b872b9544ba63441514ab6046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walls: []
   doors:
   - {fileID: 6467210372720999371}
   - {fileID: 3305806789568309976}
   - {fileID: 4308644938209990946}
   - {fileID: 6032250269305958119}
-  enemySpawner: {fileID: 0}
-  isFirstRoom: 0
-  isUniqueRoom: 0
 --- !u!1 &2145157958981706294
 GameObject:
   m_ObjectHideFlags: 0
@@ -1487,7 +1483,6 @@ GameObject:
   - component: {fileID: 5166802354432260084}
   - component: {fileID: 8197742340525487761}
   - component: {fileID: 4700438498781690285}
-  - component: {fileID: 5089621505617220896}
   m_Layer: 0
   m_Name: Tilemap
   m_TagString: Untagged
@@ -1673,23 +1668,6 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
---- !u!114 &5089621505617220896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6115525157733982818}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a219f4b872b9544ba63441514ab6046, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  walls: []
-  doors: []
-  enemySpawner: {fileID: 0}
-  isFirstRoom: 0
-  isUniqueRoom: 0
 --- !u!1 &6467210372720999371
 GameObject:
   m_ObjectHideFlags: 0

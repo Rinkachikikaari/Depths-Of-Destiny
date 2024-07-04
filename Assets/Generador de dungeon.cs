@@ -47,12 +47,10 @@ public class DungeonGenerator : MonoBehaviour
             if (currentRoom == 0)
             {
                 rc = GenerateRoom(roomPrefab, new Vector2(actualPosition.x * width, actualPosition.y * height));
-                rc.isFirstRoom = true;
             }
             else if (uniqueRoomsGenerated < uniqueRoomQuantity && Random.Range(0, remainingRooms) < uniqueRoomQuantity - uniqueRoomsGenerated)
             {
                 rc = GenerateRoom(uniqueRoomPrefab, new Vector2(actualPosition.x * width, actualPosition.y * height));
-                rc.isUniqueRoom = true;
                 uniqueRoomsGenerated++;
             }
             else
