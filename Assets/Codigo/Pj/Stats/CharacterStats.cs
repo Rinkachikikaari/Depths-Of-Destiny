@@ -5,8 +5,9 @@ public class CharacterStats : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth { get; private set; }
     public int attackPower = 10;
-    public float moveSpeed = 5f;
+    public int moveSpeed = 5;
     public float attackSpeed = 3;
+    public float AttackTime = 1;
 
     private void Awake()
     {

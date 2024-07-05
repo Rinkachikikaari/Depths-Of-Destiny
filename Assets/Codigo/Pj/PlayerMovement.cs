@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -6,23 +7,31 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     private CharacterStats characterStats;
     private Vector2 mov;
+    private PlayerAttack PlayerAttack;
+    private bool CanAttack = true;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        PlayerAttack = GetComponent<PlayerAttack>();
         characterStats = GetComponent<CharacterStats>();
     }
 
     void Update()
     {
         MovePj();
+        if (Input.GetMouseButtonDown(0) && CanAttack) // Si se presiona el botón de ataque y se puede atacar
+        {
+            PlayerAttack.Attack();
+        }
     }
 
     void FixedUpdate()
     {
         // Mover el personaje usando la velocidad del characterStats
         rb.MovePosition(rb.position + mov * characterStats.moveSpeed * Time.fixedDeltaTime);
+
     }
 
     void MovePj()
@@ -34,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (mov != Vector2.zero)
         {
+            CanAttack = false;
             // Configurar animaciones
             animator.SetFloat("Horizontal", hor);
             animator.SetFloat("Vertical", ver);
@@ -41,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+            CanAttack = true;
             animator.SetFloat("Speed", 0);
         }
     }

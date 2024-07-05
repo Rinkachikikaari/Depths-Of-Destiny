@@ -1,32 +1,37 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
     public Animator animator; // Referencia al Animator del personaje
     public GameObject attackCollider; // Referencia al GameObject del collider de ataque
+    private CharacterStats characterStats;
+
 
     private bool canAttack = true;
-    void Update()
+
+    private void Start()
     {
-        if (Input.GetMouseButtonDown(0) && canAttack) // Si se presiona el botón de ataque y se puede atacar
-        {
-            Attack();
-        }
+        characterStats = GetComponent<CharacterStats>();
+
     }
 
-    void Attack()
+    void Update()
+    {
+
+    }
+
+    public void Attack()
     {
         // Reproducir la animación de ataque
         animator.SetTrigger("Attack");
-        canAttack = false; // No se puede atacar hasta que la animación termine
-        new WaitForSeconds(1.5f);
-        OnAttackEnd();
+        StartCooldown();
+        animator.SetTrigger("NotAttack");
     }
 
     // Este método será llamado desde la animación de ataque cuando termine (a través de un evento de animación)
-    public void OnAttackEnd()
+    IEnumerator StartCooldown()
     {
-        canAttack = true; // Permitir atacar nuevamente
-        animator.SetTrigger("NotAttack");
-    } 
+        yield return new WaitForSeconds(characterStats.AttackTime);
+    }
 }

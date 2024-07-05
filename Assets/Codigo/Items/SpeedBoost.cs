@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SpeedBoost : StatModifier
 {
-    public float speedIncrease = 2f;
+    public int speedIncrease = 2;
 
     public override void Apply(CharacterStats stats)
     {
