@@ -4,13 +4,14 @@ public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody2D rb;
     public Animator animator;
-    public float speed = 5f;
+    private CharacterStats characterStats;
     private Vector2 mov;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        characterStats = GetComponent<CharacterStats>();
     }
 
     void Update()
@@ -20,8 +21,8 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Mover el personaje
-        rb.MovePosition(rb.position + mov * speed * Time.fixedDeltaTime);
+        // Mover el personaje usando la velocidad del characterStats
+        rb.MovePosition(rb.position + mov * characterStats.moveSpeed * Time.fixedDeltaTime);
     }
 
     void MovePj()

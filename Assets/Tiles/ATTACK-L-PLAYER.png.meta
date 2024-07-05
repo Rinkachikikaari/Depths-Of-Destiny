@@ -1,0 +1,260 @@
+fileFormatVersion: 2
+guid: cf1e0152f1f3182408c93dafcf25cfd0
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ATTACK-L-PLAYER_8
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 25
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4f6900c1a2b5e74fbdbcfb6fb71eb8a
+      internalID: -1100300674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATTACK-L-PLAYER_0
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 25
+        width: 33
+        height: 32
+      alignment: 9
+      pivot: {x: 0.30849734, y: 0.46775723}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e0dbac7fbf388744aca21245b32c379
+      internalID: -711912645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATTACK-L-PLAYER_1
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 10
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.568516, y: 0.48186344}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d9dbe1e67814fd45a217c2e39ac38c9
+      internalID: 1100134556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATTACK-L-PLAYER_2
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 10
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.57053137, y: 0.4838786}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c34695885203f54c883a0e2679655b6
+      internalID: 35436163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATTACK-L-PLAYER_3
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 10
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.463727, y: 0.4838786}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41ce0888b29df4249ac59e12dcdf1b5c
+      internalID: 1282090255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATTACK-L-PLAYER_4
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 10
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.47984838, y: 0.4838786}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e415bc51eb6aabc4f83a8cdd70ac6481
+      internalID: 991156092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ATTACK-L-PLAYER_0: -711912645
+      ATTACK-L-PLAYER_1: 1100134556
+      ATTACK-L-PLAYER_10: 992192210
+      ATTACK-L-PLAYER_11: -741978586
+      ATTACK-L-PLAYER_12: -400131057
+      ATTACK-L-PLAYER_13: 2050951460
+      ATTACK-L-PLAYER_14: -417472456
+      ATTACK-L-PLAYER_15: -1923635854
+      ATTACK-L-PLAYER_16: -1850938801
+      ATTACK-L-PLAYER_17: -97874100
+      ATTACK-L-PLAYER_18: -1914179073
+      ATTACK-L-PLAYER_19: -1304039246
+      ATTACK-L-PLAYER_2: 35436163
+      ATTACK-L-PLAYER_3: 1282090255
+      ATTACK-L-PLAYER_4: 991156092
+      ATTACK-L-PLAYER_5: 1915536562
+      ATTACK-L-PLAYER_6: -1746522415
+      ATTACK-L-PLAYER_7: 1653974432
+      ATTACK-L-PLAYER_8: -1100300674
+      ATTACK-L-PLAYER_9: 452419721
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
