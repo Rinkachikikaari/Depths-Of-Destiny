@@ -2,14 +2,15 @@ using UnityEngine;
 
 public class AttackCollider : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D other)
+    public CharacterStats playerStats;
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (other.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
-            Enemy enemy = other.GetComponent<Enemy>();
+            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
             if (enemy != null)
             {
-                enemy.TakeDamage();
+                enemy.TakeDamage(playerStats.attackPower);
             }
         }
     }

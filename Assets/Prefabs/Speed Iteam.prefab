@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9051993953972887850}
   - component: {fileID: 6817070813561223082}
   m_Layer: 0
-  m_Name: Hexagon Flat-Top
+  m_Name: Speed Iteam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -15,9 +15,9 @@ public class Enemy : MonoBehaviour
         originalColor = spriteRenderer.color;
     }
 
-    public void TakeDamage()
+    public void TakeDamage(int damage)
     {
-        currentHealth -= 10; // Aquí puedes ajustar el daño
+        currentHealth -= damage; // Aquí puedes ajustar el daño
         StartCoroutine(FlashWhite());
         if (currentHealth <= 0)
         {

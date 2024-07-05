@@ -6,7 +6,6 @@ public class PlayerAttack : MonoBehaviour
     public GameObject attackCollider; // Referencia al GameObject del collider de ataque
 
     private bool canAttack = true;
-
     void Update()
     {
         if (Input.GetMouseButtonDown(0) && canAttack) // Si se presiona el botón de ataque y se puede atacar
@@ -29,5 +28,5 @@ public class PlayerAttack : MonoBehaviour
     {
         canAttack = true; // Permitir atacar nuevamente
         animator.SetTrigger("NotAttack");
-    }
+    } 
 }
