@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private CharacterStats characterStats;
     private Vector2 mov;
     private PlayerAttack playerAttack;
+    public bool canTp = true;
 
     private void Start()
     {

@@ -79,14 +79,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 20
   height: 12
-  roomPrefab: {fileID: 7151234049885506679, guid: 1d23010f81c372a48bf3c7a9dc6dbfe6, type: 3}
+  roomPrefab: {fileID: 7151234049885506679, guid: 79298951b896d644199634eb29c4e332, type: 3}
   roomPrefabs:
   - {fileID: 7151234049885506679, guid: 894a6ff800db345409673d6d764db341, type: 3}
-  - {fileID: 7151234049885506679, guid: 1d23010f81c372a48bf3c7a9dc6dbfe6, type: 3}
-  uniqueRoomPrefab: {fileID: 7151234049885506679, guid: 40156e22b41ac7e479c547d6fc60c65c, type: 3}
-  bossRoomPrefab: {fileID: 0}
+  - {fileID: 7151234049885506679, guid: 21efec0bfeba9f448ac5cbfdf81ace43, type: 3}
+  - {fileID: 7151234049885506679, guid: d2a2954444ae3fe4796b59d77abcfcce, type: 3}
+  - {fileID: 7151234049885506679, guid: c60eb14b5518b1f41a7dc41288808dc1, type: 3}
+  - {fileID: 7151234049885506679, guid: a75d1dec83da212478e03899b5f619d2, type: 3}
+  - {fileID: 7151234049885506679, guid: b3ec4edc793002347aa12bea86172c67, type: 3}
+  uniqueRoomPrefab: {fileID: 7151234049885506679, guid: 4fb18977f3aa5734d84b2c1c1b466a0e, type: 3}
+  bossRoomPrefab: {fileID: 7151234049885506679, guid: b42a08a19314e054db435cb06b736df3, type: 3}
   world: {fileID: 5891784913143359615}
-  roomQuantity: 8
+  roomQuantity: 10
   uniqueRoomQuantity: 1
 --- !u!1001 &4768945627651150690
 PrefabInstance:

@@ -21,13 +21,11 @@ public class PlayerAttack : MonoBehaviour
             canAttack = false;
             isAttacking = true;
             animator.SetTrigger("Attack");
-            attackCollider.SetActive(true); // Activar el collider de ataque
         }
     }
 
     public void OnAttackEnd()
     {
-        attackCollider.SetActive(false); // Desactivar el collider de ataque
         isAttacking = false;
         StartCoroutine(AttackCooldown());
     }

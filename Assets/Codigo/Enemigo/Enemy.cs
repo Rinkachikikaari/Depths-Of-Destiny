@@ -30,7 +30,7 @@ public class Enemy : MonoBehaviour
     private IEnumerator FlashWhite()
     {
         isHit = true;
-        spriteRenderer.color = Color.white;
+        spriteRenderer.color = Color.red;
         yield return new WaitForSeconds(0.1f);
         spriteRenderer.color = originalColor;
         isHit = false;

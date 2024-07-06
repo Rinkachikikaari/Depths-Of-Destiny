@@ -6,7 +6,7 @@ public class Stats{
     public int currentHealth;
     public int attackPower = 10;
     public int moveSpeed = 5;
-    public float attackSpeed = 3;
+    public float attackSpeed = 2;
     public float AttackTime = 1;
 }
 

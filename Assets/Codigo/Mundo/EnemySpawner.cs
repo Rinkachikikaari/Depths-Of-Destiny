@@ -7,19 +7,21 @@ public class EnemySpawner : MonoBehaviour
     public List<GameObject> enemyPrefabs;
     public int minEnemyCount = 1;
     public int maxEnemyCount = 5;
-    private List<GameObject> enemies = new List<GameObject>();
+    public List<GameObject> enemies = new List<GameObject>();
     public List<Transform> spawnPoints = new List<Transform>();
+    public bool noHayEnemigos = true;
 
     void Start()
     {
-       
+        // Actualiza el estado inicial de noHayEnemigos
+        noHayEnemigos = AreAllEnemiesDead();
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            Invoke("SpawnEnemies",1);
+            Invoke("SpawnEnemies", 1);
         }
     }
 
@@ -47,11 +49,22 @@ public class EnemySpawner : MonoBehaviour
                 enemies.Add(enemy);
             }
         }
+
+        // Actualiza el estado de noHayEnemigos después de spawn
+        noHayEnemigos = AreAllEnemiesDead();
     }
 
     public bool AreAllEnemiesDead()
     {
         enemies.RemoveAll(enemy => enemy == null);
-        return enemies.Count == 0;
+        bool allDead = enemies.Count == 0;
+        noHayEnemigos = allDead; // Actualiza el booleano aquí también
+        return allDead;
+    }
+
+    void Update()
+    {
+        // Puedes llamar a AreAllEnemiesDead periódicamente en el Update si es necesario
+        AreAllEnemiesDead();
     }
 }

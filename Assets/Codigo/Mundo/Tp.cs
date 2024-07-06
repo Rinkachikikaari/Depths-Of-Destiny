@@ -6,7 +6,7 @@ public class Tp : MonoBehaviour
 {
     public GameObject animationExitRoom;
     bool Entro = false;
-    [SerializeField] private Spawnpoint sp;
+    public PlayerMovement PlayerMovement;
     [SerializeField] private Transform salida;
     [SerializeField] private GameObject player;
     [SerializeField] private Transform locatePlayer;
@@ -15,7 +15,7 @@ public class Tp : MonoBehaviour
 
     private void Start()
     {
-        GetComponent<Spawnpoint>();
+        PlayerMovement = player.GetComponent<PlayerMovement>();
     }
 
     private void Awake()
@@ -32,17 +32,28 @@ public class Tp : MonoBehaviour
         {
             if (Vector2.Distance(player.transform.position, transform.position) > 0.3f)
             {
-                animationExitRoom.SetActive(true);
-                Invoke("TurnOff", 1);
-                player.transform.position = salida.transform.position;
-                Camara.transform.position = CamaraTp.transform.position;
-                print(this.transform.parent.parent.GetComponent<RoomControl>().name);
+                if (PlayerMovement.canTp)
+                {
+                    animationExitRoom.SetActive(true);
+                    PlayerMovement.enabled = false;
+                    Invoke("TurnOff", 1);
+                    player.transform.position = salida.transform.position;
+                    Camara.transform.position = CamaraTp.transform.position;
+                    PlayerMovement.canTp = false;
+                    Invoke("CanTp", 2);
+                    print(this.transform.parent.parent.GetComponent<RoomControl>().name);
+                }
             }
         }
     }
 
     public void TurnOff()
     {
+        PlayerMovement.enabled = true;
         animationExitRoom.SetActive(false);
+    }
+    public void CanTp()
+    {
+        PlayerMovement.canTp = true;
     }
 }
