@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -29,11 +30,16 @@ public class PlayerMovement : MonoBehaviour
             mov = Vector2.zero; // Detener el movimiento durante el ataque
             animator.SetFloat("Speed", 0); // Actualizar la animación a parado
         }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(1);
+        }
+
     }
 
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + mov * characterStats.moveSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + mov * characterStats.currentStats.moveSpeed * Time.fixedDeltaTime);
     }
 
     void MovePj()

@@ -12,26 +12,38 @@ public class EnemySpawner : MonoBehaviour
 
     void Start()
     {
-        // Encontrar todos los puntos de spawn en la sala
-        foreach (Transform child in transform)
+       
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
         {
-            if (child.CompareTag("SpawnPoint"))
-            {
-                spawnPoints.Add(child);
-            }
+            Invoke("SpawnEnemies",1);
         }
     }
 
     public void SpawnEnemies()
     {
+        List<int> posibilities = new List<int>();
+        for (int i = 0; i < spawnPoints.Count; i++)
+        {
+            int j = i;
+            posibilities.Add(j);
+        }
         if (enemies.Count == 0 && spawnPoints.Count > 0)
         {
             int enemyCount = Random.Range(minEnemyCount, maxEnemyCount + 1);
             for (int i = 0; i < enemyCount; i++)
             {
-                Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Count)];
+                int pointID = Random.Range(0, posibilities.Count);
+                int point = posibilities[pointID];
+                posibilities.RemoveAt(pointID);
+
+                Transform spawnPoint = spawnPoints[point];
                 GameObject enemyPrefab = enemyPrefabs[Random.Range(0, enemyPrefabs.Count)];
                 GameObject enemy = Instantiate(enemyPrefab, spawnPoint.position, Quaternion.identity);
+                enemy.transform.parent = this.transform;
                 enemies.Add(enemy);
             }
         }

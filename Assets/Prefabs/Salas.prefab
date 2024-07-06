@@ -84,6 +84,7 @@ MonoBehaviour:
   - {fileID: 7151234049885506679, guid: 894a6ff800db345409673d6d764db341, type: 3}
   - {fileID: 7151234049885506679, guid: 1d23010f81c372a48bf3c7a9dc6dbfe6, type: 3}
   uniqueRoomPrefab: {fileID: 7151234049885506679, guid: 40156e22b41ac7e479c547d6fc60c65c, type: 3}
+  bossRoomPrefab: {fileID: 0}
   world: {fileID: 5891784913143359615}
   roomQuantity: 8
   uniqueRoomQuantity: 1
@@ -143,7 +144,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7199741864794653413, guid: 7edba36097320a14e9a3ad1e6f7a6e80, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

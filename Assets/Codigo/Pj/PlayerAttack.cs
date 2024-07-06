@@ -35,7 +35,7 @@ public class PlayerAttack : MonoBehaviour
     private IEnumerator AttackCooldown()
     {
         // Esperar el tiempo de cooldown antes de permitir otro ataque
-        yield return new WaitForSeconds(characterStats.attackSpeed);
+        yield return new WaitForSeconds(characterStats.currentStats.attackSpeed);
         canAttack = true;
     }
 }

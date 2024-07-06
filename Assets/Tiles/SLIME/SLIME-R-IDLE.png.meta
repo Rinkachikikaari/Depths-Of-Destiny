@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: af2d897078a97b640a860cf0fd01f6d8
+guid: 330058d99ca80964ab446e3609bd8252
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -93,131 +93,149 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ATTACK-UP-PLAYER_0
+      name: SLIME-R-IDLE_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 10
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.4999999, y: 0.4925058}
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99e3105a264d9184aa5f5370563e5cc3
-      internalID: 1282547064
+      spriteID: 762427756d382984c823bf4b3c139df2
+      internalID: 215945858
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ATTACK-UP-PLAYER_1
+      name: SLIME-R-IDLE_1
       rect:
         serializedVersion: 2
-        x: 88
-        y: 10
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5019039, y: 0.4619218}
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89805899e1e8ef4479e6467f03310859
-      internalID: 739333397
+      spriteID: 51709b6807fd57244897195c2a202f79
+      internalID: 2024920439
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ATTACK-UP-PLAYER_3
+      name: SLIME-R-IDLE_2
       rect:
         serializedVersion: 2
-        x: 168
-        y: 13
-        width: 66
-        height: 64
-      alignment: 9
-      pivot: {x: 0.48153755, y: 0.43336314}
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d0e074bbf8024941b5cd4fefd19fc7f
-      internalID: -1493178683
+      spriteID: 84ad89325561f504f9232e2d9fbc83ec
+      internalID: -893940745
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ATTACK-UP-PLAYER_4
+      name: SLIME-R-IDLE_3
       rect:
         serializedVersion: 2
-        x: 250
-        y: 13
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.46763325, y: 0.4257475}
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f8795f0d55756b418182968d3b8fc92
-      internalID: 1798657331
+      spriteID: bed28be4a31aefc4e86ba86664842c98
+      internalID: -463841259
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ATTACK-UP-PLAYER_5
+      name: SLIME-R-IDLE_4
       rect:
         serializedVersion: 2
-        x: 330
-        y: 12
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.47035646, y: 0.44367743}
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6d47221ce780864b998fafbec665318
-      internalID: -1960973374
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ATTACK-UP-PLAYER_6
-      rect:
-        serializedVersion: 2
-        x: 409
-        y: 10
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.48369598, y: 0.4733209}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 537ca7b7b838e63409aeb47b126d2f88
-      internalID: -1241850789
+      spriteID: de0f7fb1c82965541a9015db8c4a7c70
+      internalID: -1697096408
       vertices: []
       indices: 
       edges: []
@@ -233,13 +251,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ATTACK-UP-PLAYER_0: 1282547064
-      ATTACK-UP-PLAYER_1: 739333397
-      ATTACK-UP-PLAYER_2: -2032740910
-      ATTACK-UP-PLAYER_3: -1493178683
-      ATTACK-UP-PLAYER_4: 1798657331
-      ATTACK-UP-PLAYER_5: -1960973374
-      ATTACK-UP-PLAYER_6: -1241850789
+      SLIME-R-IDLE_0: 215945858
+      SLIME-R-IDLE_1: 2024920439
+      SLIME-R-IDLE_2: -893940745
+      SLIME-R-IDLE_3: -463841259
+      SLIME-R-IDLE_4: -1697096408
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -10,7 +10,7 @@ public class AttackCollider : MonoBehaviour
             if (enemy != null)
             {
                 CharacterStats playerStats = GetComponentInParent<CharacterStats>();
-                enemy.TakeDamage(playerStats.attackPower);
+                enemy.TakeDamage(playerStats.currentStats.attackPower);
 
             }
         }

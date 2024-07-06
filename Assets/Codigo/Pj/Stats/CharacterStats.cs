@@ -1,25 +1,33 @@
 using UnityEngine;
 
-public class CharacterStats : MonoBehaviour
-{
+[System.Serializable]
+public class Stats{
     public int maxHealth = 100;
-    public int currentHealth { get; private set; }
+    public int currentHealth;
     public int attackPower = 10;
     public int moveSpeed = 5;
     public float attackSpeed = 3;
     public float AttackTime = 1;
+}
+
+public class CharacterStats : MonoBehaviour
+{
+    public Stats currentStats = new Stats();
+    public static Stats MainStats = new Stats();
+    
 
     private void Awake()
     {
-        currentHealth = maxHealth;
+	    currentStats = MainStats;
+        currentStats.currentHealth = currentStats.maxHealth;
     }
 
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage;
-        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+        currentStats.currentHealth -= damage;
+        currentStats.currentHealth = Mathf.Clamp(currentStats.currentHealth, 0, currentStats.maxHealth);
 
-        if (currentHealth <= 0)
+        if (currentStats.currentHealth <= 0)
         {
             Die();
         }
@@ -27,13 +35,18 @@ public class CharacterStats : MonoBehaviour
 
     public void Heal(int amount)
     {
-        currentHealth += amount;
-        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+        currentStats.currentHealth += amount;
+        currentStats.currentHealth = Mathf.Clamp(currentStats.currentHealth, 0, currentStats.maxHealth);
     }
 
     void Die()
     {
         // Implementar lógica de muerte del personaje
         Debug.Log("Character Died");
+        MainStats = new Stats();
+    }
+
+    void OnDestroy(){
+        MainStats = currentStats;
     }
 }

@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class Tp : MonoBehaviour
 {
-    public enum miDir { U,D,L,R}
-    public miDir mine;
-    public static List<string> used;
+    public GameObject animationExitRoom;
     bool Entro = false;
     [SerializeField] private Spawnpoint sp;
     [SerializeField] private Transform salida;
@@ -17,7 +15,6 @@ public class Tp : MonoBehaviour
 
     private void Start()
     {
-        used = new List<string>();
         GetComponent<Spawnpoint>();
     }
 
@@ -29,23 +26,23 @@ public class Tp : MonoBehaviour
     }
 
 
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.CompareTag("Player") )
+        if (collision.gameObject.CompareTag("Player"))
         {
             if (Vector2.Distance(player.transform.position, transform.position) > 0.3f)
             {
+                animationExitRoom.SetActive(true);
+                Invoke("TurnOff", 1);
                 player.transform.position = salida.transform.position;
                 Camara.transform.position = CamaraTp.transform.position;
                 print(this.transform.parent.parent.GetComponent<RoomControl>().name);
-                if (!Entro) // && !used.Contains(this.transform.parent.parent.GetComponent<RoomControl>().name)
-                {
-                    sp.RandomSpawn();
-                    Entro = true;
-                    used.Add(this.transform.parent.parent.name);
-                }
             }
         }
+    }
+
+    public void TurnOff()
+    {
+        animationExitRoom.SetActive(false);
     }
 }

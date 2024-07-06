@@ -6,6 +6,6 @@ public class SpeedBoost : StatModifier
 
     public override void Apply(CharacterStats stats)
     {
-        stats.moveSpeed += speedIncrease;
+        stats.currentStats.moveSpeed += speedIncrease;
     }
 }
