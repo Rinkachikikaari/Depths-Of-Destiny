@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class AttackCollider : MonoBehaviour
 {
-    public CharacterStats playerStats;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
@@ -10,8 +9,11 @@ public class AttackCollider : MonoBehaviour
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
             if (enemy != null)
             {
+                CharacterStats playerStats = GetComponentInParent<CharacterStats>();
                 enemy.TakeDamage(playerStats.attackPower);
+
             }
         }
     }
-}
+    }
+

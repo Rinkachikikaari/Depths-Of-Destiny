@@ -3,39 +3,42 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public int maxHealth = 50;
-    private int currentHealth;
+    public int health = 100;
     private SpriteRenderer spriteRenderer;
     private Color originalColor;
+    private bool isHit = false;
 
-    void Start()
+    private void Start()
     {
-        currentHealth = maxHealth;
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalColor = spriteRenderer.color;
     }
 
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage; // Aquí puedes ajustar el daño
-        StartCoroutine(FlashWhite());
-        if (currentHealth <= 0)
+        if (!isHit)
         {
-            Die();
+            health -= damage;
+            StartCoroutine(FlashWhite());
+            if (health <= 0)
+            {
+                Die();
+            }
         }
     }
 
     private IEnumerator FlashWhite()
     {
+        isHit = true;
         spriteRenderer.color = Color.white;
-        yield return new WaitForSeconds(0.1f); // Espera un momento
+        yield return new WaitForSeconds(0.1f);
         spriteRenderer.color = originalColor;
+        isHit = false;
     }
 
-    void Die()
+    private void Die()
     {
         // Implementar lógica de muerte del enemigo
-        Debug.Log("Enemy Died");
         Destroy(gameObject);
     }
 }

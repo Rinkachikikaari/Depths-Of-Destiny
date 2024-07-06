@@ -6,32 +6,36 @@ public class PlayerAttack : MonoBehaviour
     public Animator animator; // Referencia al Animator del personaje
     public GameObject attackCollider; // Referencia al GameObject del collider de ataque
     private CharacterStats characterStats;
-
-
-    private bool canAttack = true;
+    public bool canAttack = true;
+    public bool isAttacking = false;
 
     private void Start()
     {
         characterStats = GetComponent<CharacterStats>();
-
-    }
-
-    void Update()
-    {
-
     }
 
     public void Attack()
     {
-        // Reproducir la animación de ataque
-        animator.SetTrigger("Attack");
-        StartCooldown();
-        animator.SetTrigger("NotAttack");
+        if (canAttack)
+        {
+            canAttack = false;
+            isAttacking = true;
+            animator.SetTrigger("Attack");
+            attackCollider.SetActive(true); // Activar el collider de ataque
+        }
     }
 
-    // Este método será llamado desde la animación de ataque cuando termine (a través de un evento de animación)
-    IEnumerator StartCooldown()
+    public void OnAttackEnd()
     {
-        yield return new WaitForSeconds(characterStats.AttackTime);
+        attackCollider.SetActive(false); // Desactivar el collider de ataque
+        isAttacking = false;
+        StartCoroutine(AttackCooldown());
+    }
+
+    private IEnumerator AttackCooldown()
+    {
+        // Esperar el tiempo de cooldown antes de permitir otro ataque
+        yield return new WaitForSeconds(characterStats.attackSpeed);
+        canAttack = true;
     }
 }
