@@ -1643,7 +1643,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!66 &4204706956123969932
 CompositeCollider2D:
@@ -2068,6 +2068,7 @@ MonoBehaviour:
   locatePlayer: {fileID: 0}
   Camara: {fileID: 0}
   CamaraTp: {fileID: 2853164750305068024}
+  isActive: 1
 --- !u!1 &3745587763607389308
 GameObject:
   m_ObjectHideFlags: 0
@@ -2453,6 +2454,7 @@ MonoBehaviour:
   locatePlayer: {fileID: 0}
   Camara: {fileID: 0}
   CamaraTp: {fileID: 3948909962200521416}
+  isActive: 1
 --- !u!1 &4356963054287233716
 GameObject:
   m_ObjectHideFlags: 0
@@ -2767,6 +2769,7 @@ GameObject:
   - component: {fileID: 6984172885760202128}
   - component: {fileID: 1491743986327504073}
   - component: {fileID: 4288231988473565666}
+  - component: {fileID: 4332565730495558720}
   m_Layer: 0
   m_Name: Door L
   m_TagString: Untagged
@@ -3001,6 +3004,52 @@ MonoBehaviour:
   locatePlayer: {fileID: 0}
   Camara: {fileID: 0}
   CamaraTp: {fileID: 6738841078440834708}
+  isActive: 1
+--- !u!61 &4332565730495558720
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6032250269305958119}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -8.1475, y: 0.009068489}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.6641369, y: 1.348732}
+  m_EdgeRadius: 0
 --- !u!1 &6115525157733982818
 GameObject:
   m_ObjectHideFlags: 0
@@ -3486,6 +3535,7 @@ MonoBehaviour:
   locatePlayer: {fileID: 0}
   Camara: {fileID: 0}
   CamaraTp: {fileID: 1786254971345584034}
+  isActive: 1
 --- !u!61 &1989822353142126409
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5243,6 +5293,7 @@ MonoBehaviour:
   - {fileID: 8099797881938266014, guid: 09b151a7be422fa4badac91f42d04af5, type: 3}
   minEnemyCount: 2
   maxEnemyCount: 5
+  enemies: []
   spawnPoints:
   - {fileID: 3322826550431660629}
   - {fileID: 1939933160360698484}
@@ -5255,6 +5306,13 @@ MonoBehaviour:
   - {fileID: 2619955527608769134}
   - {fileID: 7631977942546312889}
   - {fileID: 8639981167845845627}
+  doors:
+  - {fileID: 5888790882007641318}
+  - {fileID: 981761809056272749}
+  - {fileID: 3841339797718786094}
+  - {fileID: 4288231988473565666}
+  noHayEnemigos: 1
+  spawnedOnce: 0
 --- !u!61 &2919693033516704160
 BoxCollider2D:
   m_ObjectHideFlags: 0

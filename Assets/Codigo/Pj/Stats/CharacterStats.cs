@@ -49,4 +49,11 @@ public class CharacterStats : MonoBehaviour
     void OnDestroy(){
         MainStats = currentStats;
     }
+
+    public void AddStats(Stats addStats)
+    {
+        currentStats.maxHealth += addStats.maxHealth * 2;
+
+
+    }
 }

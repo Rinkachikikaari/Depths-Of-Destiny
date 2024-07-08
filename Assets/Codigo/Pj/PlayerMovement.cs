@@ -52,8 +52,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (mov != Vector2.zero)
         {
-            animator.SetFloat("Horizontal", hor);
-            animator.SetFloat("Vertical", ver);
+            animator.SetFloat("Horizontal", hor == 0 ? 0 : hor < 0 ? -1 : 1 );
+            animator.SetFloat("Vertical", ver == 0 ? 0 : ver < 0 ? -1 : 1);
             animator.SetFloat("Speed", mov.sqrMagnitude);
         }
         else

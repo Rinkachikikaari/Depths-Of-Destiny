@@ -6,7 +6,7 @@ public class AttackCollider : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+            EnemyLife enemy = collision.gameObject.GetComponent<EnemyLife>();
             if (enemy != null)
             {
                 CharacterStats playerStats = GetComponentInParent<CharacterStats>();

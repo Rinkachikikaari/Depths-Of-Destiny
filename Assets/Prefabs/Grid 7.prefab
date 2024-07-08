@@ -1612,7 +1612,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!66 &6125656130291569261
 CompositeCollider2D:
@@ -1930,6 +1930,7 @@ MonoBehaviour:
   locatePlayer: {fileID: 0}
   Camara: {fileID: 0}
   CamaraTp: {fileID: 2579859207453889779}
+  isActive: 1
 --- !u!61 &5935512331736263880
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2253,6 +2254,7 @@ MonoBehaviour:
   locatePlayer: {fileID: 0}
   Camara: {fileID: 0}
   CamaraTp: {fileID: 4429405914300728248}
+  isActive: 1
 --- !u!61 &594598610239518601
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2785,6 +2787,7 @@ MonoBehaviour:
   locatePlayer: {fileID: 0}
   Camara: {fileID: 0}
   CamaraTp: {fileID: 2021322777856382248}
+  isActive: 1
 --- !u!61 &8295869681511324033
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3595,6 +3598,7 @@ MonoBehaviour:
   locatePlayer: {fileID: 0}
   Camara: {fileID: 0}
   CamaraTp: {fileID: 4577066355405118221}
+  isActive: 1
 --- !u!61 &3227291245413129406
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5247,8 +5251,12 @@ MonoBehaviour:
   - {fileID: 8099797881938266014, guid: 09b151a7be422fa4badac91f42d04af5, type: 3}
   minEnemyCount: 2
   maxEnemyCount: 5
+  enemies: []
   spawnPoints:
   - {fileID: 0}
+  doors: []
+  noHayEnemigos: 1
+  spawnedOnce: 0
 --- !u!1001 &3657966926338085809
 PrefabInstance:
   m_ObjectHideFlags: 0

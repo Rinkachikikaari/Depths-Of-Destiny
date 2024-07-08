@@ -1519,7 +1519,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!66 &291836773328307576
 CompositeCollider2D:
@@ -1944,6 +1944,7 @@ MonoBehaviour:
   locatePlayer: {fileID: 0}
   Camara: {fileID: 0}
   CamaraTp: {fileID: 3749801094007321647}
+  isActive: 1
 --- !u!1 &4250359157325356473
 GameObject:
   m_ObjectHideFlags: 0
@@ -2267,6 +2268,7 @@ MonoBehaviour:
   locatePlayer: {fileID: 0}
   Camara: {fileID: 0}
   CamaraTp: {fileID: 6687072249493495021}
+  isActive: 1
 --- !u!1 &4356963054287233716
 GameObject:
   m_ObjectHideFlags: 0
@@ -2737,6 +2739,7 @@ MonoBehaviour:
   locatePlayer: {fileID: 0}
   Camara: {fileID: 0}
   CamaraTp: {fileID: 4595376349650866487}
+  isActive: 1
 --- !u!1 &6115525157733982818
 GameObject:
   m_ObjectHideFlags: 0
@@ -3267,6 +3270,7 @@ MonoBehaviour:
   locatePlayer: {fileID: 0}
   Camara: {fileID: 0}
   CamaraTp: {fileID: 8005998783271259580}
+  isActive: 1
 --- !u!1 &6908859799207600507
 GameObject:
   m_ObjectHideFlags: 0

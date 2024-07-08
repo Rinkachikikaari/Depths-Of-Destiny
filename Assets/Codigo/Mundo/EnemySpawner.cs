@@ -9,8 +9,9 @@ public class EnemySpawner : MonoBehaviour
     public int maxEnemyCount = 5;
     public List<GameObject> enemies = new List<GameObject>();
     public List<Transform> spawnPoints = new List<Transform>();
+    public List<Tp> doors = new List<Tp>();
     public bool noHayEnemigos = true;
-
+    public bool spawnedOnce = false;
     void Start()
     {
         // Actualiza el estado inicial de noHayEnemigos
@@ -27,6 +28,11 @@ public class EnemySpawner : MonoBehaviour
 
     public void SpawnEnemies()
     {
+        if(spawnedOnce == true) 
+        {
+            return;
+        }
+
         List<int> posibilities = new List<int>();
         for (int i = 0; i < spawnPoints.Count; i++)
         {
@@ -48,6 +54,15 @@ public class EnemySpawner : MonoBehaviour
                 enemy.transform.parent = this.transform;
                 enemies.Add(enemy);
             }
+            if(enemyCount > 0)
+            {
+                // Cerrar Puertas
+                for (int i = 0; i < doors.Count; i++)
+                {
+                    doors[i].CloseDoor();
+                }
+            }
+            spawnedOnce = true;
         }
 
         // Actualiza el estado de noHayEnemigos después de spawn
@@ -59,6 +74,14 @@ public class EnemySpawner : MonoBehaviour
         enemies.RemoveAll(enemy => enemy == null);
         bool allDead = enemies.Count == 0;
         noHayEnemigos = allDead; // Actualiza el booleano aquí también
+        // Abrir Puertas
+        if (noHayEnemigos) { 
+            for (int i = 0; i < doors.Count; i++)
+            {
+                doors[i].OpenDoor();
+            }
+        }
+
         return allDead;
     }
 

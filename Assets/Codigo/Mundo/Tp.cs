@@ -13,6 +13,8 @@ public class Tp : MonoBehaviour
     [SerializeField] private GameObject Camara;
     [SerializeField] private Transform CamaraTp;
 
+    [SerializeField] bool isActive = true; 
+
     private void Start()
     {
         PlayerMovement = player.GetComponent<PlayerMovement>();
@@ -28,7 +30,7 @@ public class Tp : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && isActive)
         {
             if (Vector2.Distance(player.transform.position, transform.position) > 0.3f)
             {
@@ -55,5 +57,17 @@ public class Tp : MonoBehaviour
     public void CanTp()
     {
         PlayerMovement.canTp = true;
+    }
+
+    public void CloseDoor()
+    {
+        isActive = false;
+        // puertaVisual.gameObject.SetActive(true);
+    }
+
+    public void OpenDoor()
+    {
+        isActive = true;
+        // puertaVisual.gameObject.SetActive(false);
     }
 }
