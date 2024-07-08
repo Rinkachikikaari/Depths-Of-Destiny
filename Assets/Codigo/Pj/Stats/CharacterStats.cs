@@ -53,7 +53,8 @@ public class CharacterStats : MonoBehaviour
     public void AddStats(Stats addStats)
     {
         currentStats.maxHealth += addStats.maxHealth * 2;
-
-
+        currentStats.attackPower += addStats.attackPower;
+        currentStats.moveSpeed += addStats.moveSpeed;
+        currentStats.attackSpeed += addStats.attackSpeed;
     }
 }

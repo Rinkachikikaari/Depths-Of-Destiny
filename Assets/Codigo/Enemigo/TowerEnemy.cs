@@ -18,7 +18,7 @@ public class TowerEnemy : MonoBehaviour
 
     private void Update()
     {
-        if (Vector3.Distance(transform.position, player.position) <= detectionRange)
+        if (Vector2.Distance(transform.position, player.position) <= detectionRange)
         {
             if (Time.time >= nextFireTime)
             {
@@ -30,6 +30,11 @@ public class TowerEnemy : MonoBehaviour
 
     private void Shoot()
     {
-        Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
+        GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
+        Projectile projectileScript = projectile.GetComponent<Projectile>();
+        if (projectileScript != null)
+        {
+            projectileScript.SetTarget(player);
+        }
     }
 }

@@ -261,6 +261,10 @@ PrefabInstance:
       value: Pj
       objectReference: {fileID: 0}
     - target: {fileID: 7756506595279480138, guid: eb950f11ce25e3c40af92b99e8a33d0a, type: 3}
+      propertyPath: currentStats.maxHealth
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7756506595279480138, guid: eb950f11ce25e3c40af92b99e8a33d0a, type: 3}
       propertyPath: currentStats.attackPower
       value: 50
       objectReference: {fileID: 0}
@@ -379,7 +383,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6025251800676731729, guid: 30da9ca43c883fd4b8dd213893b04dab, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8890357808598259144}
   - component: {fileID: 7811641377673730396}
   - component: {fileID: -73573214111450470}
+  - component: {fileID: 4188485819019149803}
   m_Layer: 0
   m_Name: Torre
   m_TagString: Enemy
@@ -172,3 +173,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &4188485819019149803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8099797881938266014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5728c8210213227448cc4cbbfed9fc4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 5027960538920230362, guid: a3c47e0240c178e4d90e1d1f6f6a3e8e, type: 3}
+  firePoint: {fileID: 0}
+  fireRate: 1
+  detectionRange: 10
