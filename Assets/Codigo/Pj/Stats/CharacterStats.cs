@@ -2,7 +2,7 @@ using UnityEngine;
 
 [System.Serializable]
 public class Stats{
-    public int maxHealth = 100;
+    public int maxHealth = 6;
     public int currentHealth;
     public int attackPower = 10;
     public int moveSpeed = 5;

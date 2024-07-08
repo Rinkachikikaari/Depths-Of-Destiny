@@ -8,6 +8,8 @@ public class ItemPickup : MonoBehaviour
     public Stats statsToAdd;
     public Stats minToAdd;
     public Stats maxToAdd;
+    public GameObject hud;
+    public GameObject pedestal;
 
     private void Start()
     {
@@ -21,12 +23,15 @@ public class ItemPickup : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        CharacterStats stats = other.GetComponent<CharacterStats>();
-        if (stats != null)
+        if (other.gameObject.CompareTag("Player"))
         {
-            stats.AddStats(statsToAdd);
-            Destroy(gameObject); // Destruir el item después de recogerlo
+            CharacterStats stats = other.GetComponent<CharacterStats>();
+            if (stats != null)
+            {
+                hud.active = true;
+            }
         }
+        
     }
 
 
