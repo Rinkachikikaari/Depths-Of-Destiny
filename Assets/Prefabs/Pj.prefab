@@ -141,6 +141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 9179433521290900389}
   animator: {fileID: 6897277902924398057}
+  canTp: 1
 --- !u!61 &3027994489130899726
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -256,7 +257,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!95 &6897277902924398057
 Animator:
