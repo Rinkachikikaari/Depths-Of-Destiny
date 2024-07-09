@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6923133134575601501}
   - component: {fileID: 2465235396728909397}
+  - component: {fileID: 4042604178472349968}
   - component: {fileID: 5914756650216799653}
-  - component: {fileID: 9051993953972887850}
-  - component: {fileID: 6817070813561223082}
+  - component: {fileID: 8699894017065982190}
   m_Layer: 0
   m_Name: Speed Iteam
   m_TagString: Untagged
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 2747690628134850419, guid: b670ab75dde984907b8570040daa08c5, type: 3}
+  m_Sprite: {fileID: -522878594, guid: 378b5ac73bd0df0429b555346b8874d3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -87,6 +87,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4042604178472349968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5483055270648785840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37ffb8132d0a3fe4ca78eb4d9f086507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statsToAdd:
+    maxHealth: 0
+    currentHealth: 2
+    attackPower: 0
+    moveSpeed: 0
+    attackSpeed: 0
+    AttackTime: 0
 --- !u!58 &5914756650216799653
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -122,28 +141,30 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &9051993953972887850
-MonoBehaviour:
+--- !u!50 &8699894017065982190
+Rigidbody2D:
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5483055270648785840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79d0a3970d0a03449ab752bf1d7ab3c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speedIncrease: 3
---- !u!114 &6817070813561223082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5483055270648785840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74e4506861856aa4f92039adc3da54c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 3
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

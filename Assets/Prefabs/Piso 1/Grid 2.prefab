@@ -5127,6 +5127,7 @@ MonoBehaviour:
   - {fileID: 1280358541261316479, guid: 5fdb1517cfb0ec548ab404d92d2ddc9d, type: 3}
   - {fileID: 3373718087297837777, guid: eb68085fc8fc95f4b8f4807a277d02c4, type: 3}
   - {fileID: 8099797881938266014, guid: 09b151a7be422fa4badac91f42d04af5, type: 3}
+  HeartPrefab: {fileID: 5483055270648785840, guid: 1bb56a492be0b5941b7b6e0995c4420f, type: 3}
   minEnemyCount: 2
   maxEnemyCount: 5
   enemies: []
@@ -5137,6 +5138,7 @@ MonoBehaviour:
   - {fileID: 4539227618577989708}
   - {fileID: 3403541788754527418}
   - {fileID: 1836217943033245608}
+  spawnHeart: {fileID: 7107575347112798852}
   doors:
   - {fileID: 5664657284452654066}
   - {fileID: 2306268563604661951}

@@ -5,13 +5,16 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public List<GameObject> enemyPrefabs;
+    public GameObject HeartPrefab;
     public int minEnemyCount = 1;
     public int maxEnemyCount = 5;
     public List<GameObject> enemies = new List<GameObject>();
     public List<Transform> spawnPoints = new List<Transform>();
+    public Transform spawnHeart;
     public List<Tp> doors = new List<Tp>();
     public bool noHayEnemigos = true;
     public bool spawnedOnce = false;
+    public bool si = false;
     void Start()
     {
         // Actualiza el estado inicial de noHayEnemigos
@@ -67,6 +70,7 @@ public class EnemySpawner : MonoBehaviour
 
         // Actualiza el estado de noHayEnemigos después de spawn
         noHayEnemigos = AreAllEnemiesDead();
+
     }
 
     public bool AreAllEnemiesDead()
@@ -81,13 +85,35 @@ public class EnemySpawner : MonoBehaviour
                 doors[i].OpenDoor();
             }
         }
-
         return allDead;
+ 
+    }
+    public void HeartItem()
+    {
+        int Corazon = Random.Range(0, 2);
+        if (Corazon == 1 && !si)
+        {
+
+            GameObject Heart = Instantiate(HeartPrefab, spawnHeart.position, Quaternion.identity);
+            si = true;
+
+        }
+        if (Corazon == 2 && !si)
+        {
+            GameObject Heart = Instantiate(HeartPrefab, spawnHeart.position, Quaternion.identity);
+            si = true;
+        }
+        Debug.Log("mala cuea");
+
     }
 
     void Update()
     {
         // Puedes llamar a AreAllEnemiesDead periódicamente en el Update si es necesario
+        if (spawnedOnce && noHayEnemigos)
+        {
+            HeartItem();
+        }
         AreAllEnemiesDead();
     }
 }

@@ -3717,7 +3717,6 @@ GameObject:
   - component: {fileID: 6330423353125047224}
   - component: {fileID: 7565599396272548963}
   - component: {fileID: 689985592970514044}
-  - component: {fileID: 8353871373431564769}
   m_Layer: 0
   m_Name: ground
   m_TagString: Untagged
@@ -5233,30 +5232,6 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
---- !u!114 &8353871373431564769
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8123952122938356753}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95f99ecc08be30f4abf5cc5bd2d4f05e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyPrefabs:
-  - {fileID: 1280358541261316479, guid: 5fdb1517cfb0ec548ab404d92d2ddc9d, type: 3}
-  - {fileID: 3373718087297837777, guid: eb68085fc8fc95f4b8f4807a277d02c4, type: 3}
-  - {fileID: 8099797881938266014, guid: 09b151a7be422fa4badac91f42d04af5, type: 3}
-  minEnemyCount: 2
-  maxEnemyCount: 5
-  enemies: []
-  spawnPoints:
-  - {fileID: 0}
-  doors: []
-  noHayEnemigos: 1
-  spawnedOnce: 0
 --- !u!1001 &3657966926338085809
 PrefabInstance:
   m_ObjectHideFlags: 0
