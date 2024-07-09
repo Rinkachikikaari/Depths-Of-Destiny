@@ -5,11 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Boss
+  - Prollectil
+  - A
+  - Wall
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Enemy
   - Water
   - UI
   - 

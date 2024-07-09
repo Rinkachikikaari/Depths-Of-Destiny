@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7507633707791861635}
   - component: {fileID: 7262737592105156599}
   - component: {fileID: 3017014224803782164}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: PD
   m_TagString: Prollectil
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ CircleCollider2D:
     m_Bits: 63
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 72
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -158,7 +158,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 5027960538920230362}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83ad4b39de6b51747bf05d8837a14620, type: 3}
+  m_Script: {fileID: 11500000, guid: e8d4802208b5d8041913800b57728547, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 3
+  damage: 1

@@ -5,24 +5,22 @@ public class Projectile : MonoBehaviour
     public float speed = 5f;
     public int damage = 10;
 
-    private Transform target;
+    private Vector2 targetPosition;
 
-    public void SetTarget(Transform target)
+    public void SetTarget(Vector2 targetPosition)
     {
-        this.target = target;
+        this.targetPosition = targetPosition;
     }
 
     private void Update()
     {
-        if (target == null)
+        Vector2 direction = (targetPosition - (Vector2)transform.position).normalized;
+        transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
+
+        if ((Vector2)transform.position == targetPosition)
         {
             Destroy(gameObject);
-            return;
         }
-
-        Vector2 direction = (Vector2)target.position - (Vector2)transform.position;
-        direction.Normalize();
-        transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -34,7 +34,7 @@ public class TowerEnemy : MonoBehaviour
         Projectile projectileScript = projectile.GetComponent<Projectile>();
         if (projectileScript != null)
         {
-            projectileScript.SetTarget(player);
+            projectileScript.SetTarget(player.transform.position);
         }
     }
 }
