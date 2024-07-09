@@ -28,9 +28,9 @@ public class Tp : MonoBehaviour
     }
 
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.CompareTag("Player") && isActive)
+        if (other.gameObject.CompareTag("Player") && isActive)
         {
             if (Vector2.Distance(player.transform.position, transform.position) > 0.3f)
             {

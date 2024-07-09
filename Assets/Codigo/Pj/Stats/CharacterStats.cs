@@ -1,7 +1,8 @@
 using UnityEngine;
 
 [System.Serializable]
-public class Stats{
+public class Stats
+{
     public int maxHealth = 6;
     public int currentHealth;
     public int attackPower = 10;
@@ -14,12 +15,22 @@ public class CharacterStats : MonoBehaviour
 {
     public Stats currentStats = new Stats();
     public static Stats MainStats = new Stats();
-    
+
+    private HUD hud;
 
     private void Awake()
     {
-	    currentStats = MainStats;
+        currentStats = MainStats;
         currentStats.currentHealth = currentStats.maxHealth;
+        hud = FindObjectOfType<HUD>();
+        if (hud == null)
+        {
+            Debug.LogError("HUD no encontrado en la escena.");
+        }
+        else
+        {
+            Debug.Log("HUD encontrado: " + hud.name);
+        }
     }
 
     public void TakeDamage(int damage)
@@ -31,12 +42,22 @@ public class CharacterStats : MonoBehaviour
         {
             Die();
         }
+
+        if (hud != null)
+        {
+            hud.UpdateHearts();
+        }
     }
 
     public void Heal(int amount)
     {
         currentStats.currentHealth += amount;
         currentStats.currentHealth = Mathf.Clamp(currentStats.currentHealth, 0, currentStats.maxHealth);
+
+        if (hud != null)
+        {
+            hud.UpdateHearts();
+        }
     }
 
     void Die()
@@ -46,7 +67,8 @@ public class CharacterStats : MonoBehaviour
         MainStats = new Stats();
     }
 
-    void OnDestroy(){
+    void OnDestroy()
+    {
         MainStats = currentStats;
     }
 
@@ -56,5 +78,10 @@ public class CharacterStats : MonoBehaviour
         currentStats.attackPower += addStats.attackPower;
         currentStats.moveSpeed += addStats.moveSpeed;
         currentStats.attackSpeed += addStats.attackSpeed;
+
+        if (hud != null)
+        {
+            hud.UpdateHearts();
+        }
     }
 }
