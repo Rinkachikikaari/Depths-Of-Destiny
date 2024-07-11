@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 378b5ac73bd0df0429b555346b8874d3
+guid: 0ea539e986a32e249ba93f641c76d597
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
@@ -93,270 +93,215 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CorazonLleno
+      name: HalfHearthTILE_0
       rect:
         serializedVersion: 2
-        x: 18
-        y: 239
-        width: 12
-        height: 14
+        x: 2
+        y: 0
+        width: 26
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98d273002fff95f4d99361bd07cf384e
-      internalID: -522878594
+      spriteID: 87261455eb0bb4c4d9f0404ee2d34ba9
+      internalID: -1714137095
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CorazonVacio
+      name: HalfHearthTILE_1
       rect:
         serializedVersion: 2
-        x: 50
-        y: 239
-        width: 12
-        height: 14
+        x: 30
+        y: 0
+        width: 26
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6eb85386a2a8a6c498edee85e73929fa
-      internalID: -372616473
+      spriteID: deff01c12d6c04a4f83d13c88714e35c
+      internalID: 840673320
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_2
+      name: HalfHearthTILE_2
       rect:
         serializedVersion: 2
-        x: 19
-        y: 223
-        width: 42
-        height: 14
+        x: 58
+        y: 0
+        width: 26
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62fc40226a9bf43409599bbec88f6b3e
-      internalID: -18977708
+      spriteID: 34ed66f667104804b84bec4103574d1d
+      internalID: -1082525586
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_3
+      name: HalfHearthTILE_3
       rect:
         serializedVersion: 2
-        x: 85
-        y: 223
-        width: 6
-        height: 14
+        x: 86
+        y: 0
+        width: 26
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00fe3a17a076e7c48bbd5b6352638740
-      internalID: -481466409
+      spriteID: 17300eb0983b6d240971865a6102d697
+      internalID: -1708271054
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corazon a la mitad
+      name: HalfHearthTILE_4
       rect:
         serializedVersion: 2
         x: 114
-        y: 223
-        width: 12
-        height: 14
+        y: 0
+        width: 26
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2cbd3098de85b094c9a64e0c08f5ad1a
-      internalID: -239704853
+      spriteID: 363e10e6f81f3e447913facffedd5ecc
+      internalID: 1413258908
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_5
+      name: HalfHearthTILE_5
       rect:
         serializedVersion: 2
-        x: 19
-        y: 207
-        width: 42
-        height: 14
+        x: 142
+        y: 0
+        width: 26
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7199bdf315732a8488b1c6b61f69e992
-      internalID: 1469240323
+      spriteID: b8fccbe1b3f3c9042ad7cb62a3d81b42
+      internalID: 1681219060
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_6
+      name: HalfHearthTILE_6
       rect:
         serializedVersion: 2
-        x: 83
-        y: 208
-        width: 10
-        height: 12
+        x: 170
+        y: 0
+        width: 26
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e3f8f56aea95ad44b9574007d682601
-      internalID: 294833486
+      spriteID: 058eb36aa07a94943976e3b304c9cc44
+      internalID: 1897156365
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_7
+      name: HalfHearthTILE_7
       rect:
         serializedVersion: 2
-        x: 114
-        y: 207
-        width: 12
-        height: 14
+        x: 198
+        y: 0
+        width: 26
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0956ac35d0f453e4d8f12a3fa5689e67
-      internalID: -1022446210
+      spriteID: de77bd12885504843966f7eaf23545ef
+      internalID: 965680041
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_8
+      name: HalfHearthTILE_8
       rect:
         serializedVersion: 2
-        x: 19
-        y: 191
-        width: 42
-        height: 14
+        x: 226
+        y: 0
+        width: 26
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f518e995fca43b242ad1cd1d1b82416b
-      internalID: -1729903033
+      spriteID: 6c8386f10aa514b459fabd4df9572e57
+      internalID: 823811448
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_9
+      name: HalfHearthTILE_9
       rect:
         serializedVersion: 2
-        x: 82
-        y: 191
-        width: 12
-        height: 14
+        x: 254
+        y: 0
+        width: 26
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47a2f53166d79b64cb22e8be5c8c0548
-      internalID: -1667081941
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_11
-      rect:
-        serializedVersion: 2
-        x: 19
-        y: 175
-        width: 42
-        height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4e859125e196a5741ab22f16afca2c93
-      internalID: -2090260163
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_12
-      rect:
-        serializedVersion: 2
-        x: 19
-        y: 159
-        width: 42
-        height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d3012b5d4dccacc4abd99942df616022
-      internalID: -1026763318
+      spriteID: 96ddd9d5ee3448e4fbb256a1333a5a7c
+      internalID: 1293886195
       vertices: []
       indices: 
       edges: []
@@ -372,19 +317,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Corazon a la mitad: -239704853
-      CorazonLleno: -522878594
-      CorazonVacio: -372616473
-      UI_10: 873465078
-      UI_11: -2090260163
-      UI_12: -1026763318
-      UI_2: -18977708
-      UI_3: -481466409
-      UI_5: 1469240323
-      UI_6: 294833486
-      UI_7: -1022446210
-      UI_8: -1729903033
-      UI_9: -1667081941
+      HalfHearthTILE_0: -1714137095
+      HalfHearthTILE_1: 840673320
+      HalfHearthTILE_2: -1082525586
+      HalfHearthTILE_3: -1708271054
+      HalfHearthTILE_4: 1413258908
+      HalfHearthTILE_5: 1681219060
+      HalfHearthTILE_6: 1897156365
+      HalfHearthTILE_7: 965680041
+      HalfHearthTILE_8: 823811448
+      HalfHearthTILE_9: 1293886195
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5914756650216799653}
   - component: {fileID: 8699894017065982190}
   m_Layer: 0
-  m_Name: Speed Iteam
+  m_Name: Heal Iteam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,12 +76,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: -522878594, guid: 378b5ac73bd0df0429b555346b8874d3, type: 3}
+  m_Sprite: {fileID: -1973689814, guid: 6b15dc9a4517d5248adb68d1c1c62f53, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 0.8828125}
+  m_Size: {x: 0.8125, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

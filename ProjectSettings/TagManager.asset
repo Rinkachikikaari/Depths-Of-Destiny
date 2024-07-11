@@ -9,6 +9,7 @@ TagManager:
   - Prollectil
   - A
   - Wall
+  - Ataque
   layers:
   - Default
   - TransparentFX

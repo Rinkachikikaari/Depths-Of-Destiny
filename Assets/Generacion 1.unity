@@ -502,7 +502,7 @@ PrefabInstance:
     - target: {fileID: 4620000277945455751, guid: 2e5610d4b73a83d4cab970741f87edd8, type: 3}
       propertyPath: corazonActivado
       value: 
-      objectReference: {fileID: -522878594, guid: 378b5ac73bd0df0429b555346b8874d3, type: 3}
+      objectReference: {fileID: -1973689814, guid: 6b15dc9a4517d5248adb68d1c1c62f53, type: 3}
     - target: {fileID: 4620000277945455751, guid: 2e5610d4b73a83d4cab970741f87edd8, type: 3}
       propertyPath: listaCorazones.Array.size
       value: 7
