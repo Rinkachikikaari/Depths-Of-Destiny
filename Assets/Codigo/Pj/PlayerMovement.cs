@@ -45,8 +45,8 @@ public class PlayerMovement : MonoBehaviour
 
     void MovePj()
     {
-        float hor = Input.GetAxis("Horizontal");
-        float ver = Input.GetAxis("Vertical");
+        float hor = Input.GetAxisRaw("Horizontal");
+        float ver = Input.GetAxisRaw("Vertical");
 
         mov = new Vector2(hor, ver).normalized;
 
@@ -59,6 +59,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             animator.SetFloat("Speed", 0);
+            mov = Vector2.zero;
         }
     }
 }

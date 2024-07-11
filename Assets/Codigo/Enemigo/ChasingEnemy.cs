@@ -34,7 +34,21 @@ public class ChasingEnemy : MonoBehaviour
             StartCoroutine(ChargeAttack());
         }
     }
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            if(isChargeAttack && isCharging)
+            {
+                player.GetComponent<CharacterStats>().TakeDamage(chargedDamage);
+            }
+            if(!isChargeAttack && !isCharging)
+            {
+                player.GetComponent<CharacterStats>().TakeDamage(normalDamage);
+            
+            }
+        }
+    }
     private IEnumerator ChargeAttack()
     {
         isCharging = true;
@@ -47,11 +61,6 @@ public class ChasingEnemy : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f); // Tiempo de duración del ataque cargado
         rb.velocity = Vector2.zero;
-
-        if (Vector2.Distance(transform.position, player.position) <= attackRange)
-        {
-            player.GetComponent<CharacterStats>().TakeDamage(chargedDamage);
-        }
 
         yield return new WaitForSeconds(cooldownTime); // Tiempo de recarga antes de poder cargar de nuevo
 

@@ -19,10 +19,8 @@ public class HUD : MonoBehaviour
         characterStats = FindObjectOfType<CharacterStats>();
         if (characterStats == null)
         {
-            Debug.LogError("CharacterStats no encontrado en la escena.");
             return;
         }
-        Debug.Log("CharacterStats encontrado: " + characterStats.name);
         UpdateHearts();
     }
 
@@ -30,18 +28,14 @@ public class HUD : MonoBehaviour
     {
         if (characterStats == null)
         {
-            Debug.LogError("CharacterStats no está asignado.");
             return;
         }
 
-        Debug.Log("Actualizando corazones...");
+
         int maxHealth = characterStats.currentStats.maxHealth;
         int currentHealth = characterStats.currentStats.currentHealth;
         int totalHearts = maxHealth / 2;
 
-        Debug.Log("Max Health: " + maxHealth);
-        Debug.Log("Current Health: " + currentHealth);
-        Debug.Log("Total Hearts: " + totalHearts);
 
         for (int i = 0; i < listaCorazones.Count; i++)
         {
@@ -49,20 +43,16 @@ public class HUD : MonoBehaviour
 
             if (i < totalHearts)
             {
-                Debug.Log("Heart " + i + ": processing...");
                 if (currentHealth >= (i + 1) * 2)
                 {
-                    Debug.Log("Heart " + i + ": Full heart");
                     heartImage.sprite = corazonActivado; // Corazón lleno
                 }
                 else if (currentHealth == (i * 2) + 1)
                 {
-                    Debug.Log("Heart " + i + ": Half heart");
                     heartImage.sprite = corazonMitad; // Medio corazón
                 }
                 else
                 {
-                    Debug.Log("Heart " + i + ": Empty heart");
                     heartImage.sprite = corazonDesactivado; // Corazón vacío
                 }
                 listaCorazones[i].SetActive(true);
@@ -70,7 +60,6 @@ public class HUD : MonoBehaviour
             else
             {
                 listaCorazones[i].SetActive(false);
-                Debug.Log("Heart " + i + ": Disabled");
             }
         }
     }
@@ -79,7 +68,6 @@ public class HUD : MonoBehaviour
     {
         if (characterStats == null)
         {
-            Debug.LogError("CharacterStats no está asignado.");
             return;
         }
 

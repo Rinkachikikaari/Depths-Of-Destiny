@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -15,10 +16,17 @@ public class EnemySpawner : MonoBehaviour
     public bool noHayEnemigos = true;
     public bool spawnedOnce = false;
     public bool si = false;
+    [SerializeField] UnityEvent onAllEnemiesDead;
+    public SpriteRenderer Map;
+    public Color originalColor;
+    public Color Aqui;
+
     void Start()
     {
         // Actualiza el estado inicial de noHayEnemigos
         noHayEnemigos = AreAllEnemiesDead();
+        Map.color = originalColor;
+
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -26,7 +34,9 @@ public class EnemySpawner : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             Invoke("SpawnEnemies", 1);
+            Map.color = Aqui;
         }
+        Map.color = originalColor;
     }
 
     public void SpawnEnemies()
@@ -69,7 +79,14 @@ public class EnemySpawner : MonoBehaviour
         }
 
         // Actualiza el estado de noHayEnemigos después de spawn
+        bool lastNoHayEnemies = noHayEnemigos;
+        
         noHayEnemigos = AreAllEnemiesDead();
+
+        if (lastNoHayEnemies == false && noHayEnemigos == true)
+        {
+            onAllEnemiesDead.Invoke();
+        }
 
     }
 

@@ -34,11 +34,17 @@ public class MeleeEnemy : MonoBehaviour
             StartCoroutine(Attack());
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            player.GetComponent<CharacterStats>().TakeDamage(damage);
+        }
+    }
 
     private IEnumerator Attack()
     {
         isAttacking = true;
-        player.GetComponent<CharacterStats>().TakeDamage(damage);
         yield return new WaitForSeconds(attackCooldown);
         isAttacking = false;
     }
