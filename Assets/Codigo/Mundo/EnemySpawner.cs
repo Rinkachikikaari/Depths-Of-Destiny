@@ -20,8 +20,6 @@ public class EnemySpawner : MonoBehaviour
     public SpriteRenderer Map;
     public Color originalColor;
     public Color Aqui;
-    public GameObject NextLevel;
-    public GameObject PowerUp;
 
     void Start()
     {
@@ -123,8 +121,6 @@ public class EnemySpawner : MonoBehaviour
             si = true;
         }
         Debug.Log("mala cuea");
-        NextLevel.SetActive(true);
-        PowerUp.SetActive(true);
 
     }
 

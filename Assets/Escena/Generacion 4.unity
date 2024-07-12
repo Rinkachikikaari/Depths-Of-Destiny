@@ -242,46 +242,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Salas
       objectReference: {fileID: 0}
-    - target: {fileID: 1994480688899515101, guid: 93fa36e9fd10eae41821be5a1ac90026, type: 3}
-      propertyPath: roomPrefab
-      value: 
-      objectReference: {fileID: 7151234049885506679, guid: 21663950dbadac343875456c9a9ad392, type: 3}
-    - target: {fileID: 1994480688899515101, guid: 93fa36e9fd10eae41821be5a1ac90026, type: 3}
-      propertyPath: bossRoomPrefab
-      value: 
-      objectReference: {fileID: 7151234049885506679, guid: aaaa0bd523d5e9e42bf9ecfc8f98542b, type: 3}
-    - target: {fileID: 1994480688899515101, guid: 93fa36e9fd10eae41821be5a1ac90026, type: 3}
-      propertyPath: uniqueRoomPrefab
-      value: 
-      objectReference: {fileID: 7151234049885506679, guid: 0db8600a5e71bfb458c00280949d648b, type: 3}
-    - target: {fileID: 1994480688899515101, guid: 93fa36e9fd10eae41821be5a1ac90026, type: 3}
-      propertyPath: roomPrefabs.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1994480688899515101, guid: 93fa36e9fd10eae41821be5a1ac90026, type: 3}
-      propertyPath: roomPrefabs.Array.data[0]
-      value: 
-      objectReference: {fileID: 7151234049885506679, guid: b15fa347fb3009e40b8bffca15ea76fd, type: 3}
-    - target: {fileID: 1994480688899515101, guid: 93fa36e9fd10eae41821be5a1ac90026, type: 3}
-      propertyPath: roomPrefabs.Array.data[1]
-      value: 
-      objectReference: {fileID: 7151234049885506679, guid: 9667159aa5e01794b88c15e263667b02, type: 3}
-    - target: {fileID: 1994480688899515101, guid: 93fa36e9fd10eae41821be5a1ac90026, type: 3}
-      propertyPath: roomPrefabs.Array.data[2]
-      value: 
-      objectReference: {fileID: 7151234049885506679, guid: b934be59ad567ec41b0a9c9c3ebdc2ed, type: 3}
-    - target: {fileID: 1994480688899515101, guid: 93fa36e9fd10eae41821be5a1ac90026, type: 3}
-      propertyPath: roomPrefabs.Array.data[3]
-      value: 
-      objectReference: {fileID: 7151234049885506679, guid: 92c9bd5cafb367b4688382fcba791cac, type: 3}
-    - target: {fileID: 1994480688899515101, guid: 93fa36e9fd10eae41821be5a1ac90026, type: 3}
-      propertyPath: roomPrefabs.Array.data[4]
-      value: 
-      objectReference: {fileID: 7151234049885506679, guid: 62f1c498f3fc6cb4d948845d217dc8ff, type: 3}
-    - target: {fileID: 1994480688899515101, guid: 93fa36e9fd10eae41821be5a1ac90026, type: 3}
-      propertyPath: roomPrefabs.Array.data[5]
-      value: 
-      objectReference: {fileID: 7151234049885506679, guid: ecc5b0f07c910cc4d837a223ff39ddc0, type: 3}
     - target: {fileID: 4055362964130057569, guid: 93fa36e9fd10eae41821be5a1ac90026, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.82
