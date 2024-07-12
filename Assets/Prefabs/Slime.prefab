@@ -105,7 +105,7 @@ MonoBehaviour:
   damage: 1
   attackRange: 0
   detectionRange: 20
-  moveSpeed: 2
+  moveSpeed: 15
   attackCooldown: 1
 --- !u!114 &8451482508988083992
 MonoBehaviour:

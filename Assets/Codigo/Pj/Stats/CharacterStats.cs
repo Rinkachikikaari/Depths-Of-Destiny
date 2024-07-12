@@ -78,7 +78,7 @@ public class CharacterStats : MonoBehaviour
         currentStats.currentHealth += addStats.currentHealth;
         currentStats.attackPower += addStats.attackPower;
         currentStats.moveSpeed += addStats.moveSpeed;
-        currentStats.attackSpeed += addStats.attackSpeed;
+        currentStats.AttackTime -= addStats.AttackTime;
 
         if (hud != null)
         {

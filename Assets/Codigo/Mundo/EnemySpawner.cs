@@ -20,6 +20,8 @@ public class EnemySpawner : MonoBehaviour
     public SpriteRenderer Map;
     public Color originalColor;
     public Color Aqui;
+    public GameObject NextLevel;
+    public GameObject PowerUp;
 
     void Start()
     {
@@ -33,8 +35,8 @@ public class EnemySpawner : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            CambiaColor();
             Invoke("SpawnEnemies", 1);
-            Map.color = Aqui;
         }
         Map.color = originalColor;
     }
@@ -105,7 +107,7 @@ public class EnemySpawner : MonoBehaviour
         return allDead;
  
     }
-    public void HeartItem()
+    public void Item()
     {
         int Corazon = Random.Range(0, 2);
         if (Corazon == 1 && !si)
@@ -121,6 +123,8 @@ public class EnemySpawner : MonoBehaviour
             si = true;
         }
         Debug.Log("mala cuea");
+        NextLevel.SetActive(true);
+        PowerUp.SetActive(true);
 
     }
 
@@ -129,8 +133,12 @@ public class EnemySpawner : MonoBehaviour
         // Puedes llamar a AreAllEnemiesDead periódicamente en el Update si es necesario
         if (spawnedOnce && noHayEnemigos)
         {
-            HeartItem();
+            Item();
         }
         AreAllEnemiesDead();
+    }
+    void CambiaColor()
+    {
+        Map.color = Aqui;
     }
 }

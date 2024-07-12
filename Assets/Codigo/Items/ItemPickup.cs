@@ -65,7 +65,7 @@ public class ItemPickup : MonoBehaviour
         }
         if (statsToAdd.moveSpeed > 0)
         {
-            text += statsToAdd.moveSpeed + " y " + statsToAdd.attackSpeed;
+            text += statsToAdd.moveSpeed + " y " + statsToAdd.AttackTime;
         }
         if (texto) { 
             texto.text = text;

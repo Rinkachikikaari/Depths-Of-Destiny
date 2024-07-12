@@ -177,8 +177,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 682, y: 296}
-  m_SizeDelta: {x: 452.7736, y: 452.7736}
+  m_AnchoredPosition: {x: 777.8401, y: 391.84015}
+  m_SizeDelta: {x: 261.0934, y: 261.0934}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1184309229
 MonoBehaviour:
@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5686275}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -305,11 +305,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1712772618015972671, guid: eb950f11ce25e3c40af92b99e8a33d0a, type: 3}
       propertyPath: m_Size.x
-      value: 1.0430392
+      value: 0.3821184
+      objectReference: {fileID: 0}
+    - target: {fileID: 1712772618015972671, guid: eb950f11ce25e3c40af92b99e8a33d0a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1712772618015972671, guid: eb950f11ce25e3c40af92b99e8a33d0a, type: 3}
       propertyPath: m_Offset.x
-      value: -0.0060090423
+      value: 0.013951696
       objectReference: {fileID: 0}
     - target: {fileID: 1945212324258273207, guid: eb950f11ce25e3c40af92b99e8a33d0a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -488,7 +492,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 50
+  orthographic size: 60
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2

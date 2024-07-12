@@ -275,7 +275,7 @@ GameObject:
   - component: {fileID: 2975723860317107730}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3605,7 +3605,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 7
 --- !u!66 &2077621241434790930
 CompositeCollider2D:
@@ -6453,8 +6453,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   Map: {fileID: 313831870362105685}
-  originalColor: {r: 0.22248635, g: 0.1699448, b: 0.5377358, a: 1}
-  Aqui: {r: 0.48235294, g: 0.4745098, b: 0.5294118, a: 1}
+  originalColor: {r: 0.48235294, g: 0.4745098, b: 0.5294118, a: 1}
+  Aqui: {r: 0.22248635, g: 0.1699448, b: 0.5377358, a: 1}
 --- !u!61 &5343970207402730823
 BoxCollider2D:
   m_ObjectHideFlags: 0

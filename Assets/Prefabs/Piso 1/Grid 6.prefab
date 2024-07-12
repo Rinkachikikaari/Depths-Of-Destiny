@@ -245,7 +245,7 @@ GameObject:
   - component: {fileID: 8277995716119046366}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5259,6 +5259,22 @@ PrefabInstance:
       propertyPath: pedestal
       value: 
       objectReference: {fileID: 3456114931912007650}
+    - target: {fileID: 7958466654630213117, guid: 76c0713560b5fb3468fbcc44e718f7bf, type: 3}
+      propertyPath: maxToAdd.AttackTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7958466654630213117, guid: 76c0713560b5fb3468fbcc44e718f7bf, type: 3}
+      propertyPath: minToAdd.AttackTime
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7958466654630213117, guid: 76c0713560b5fb3468fbcc44e718f7bf, type: 3}
+      propertyPath: maxToAdd.attackSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7958466654630213117, guid: 76c0713560b5fb3468fbcc44e718f7bf, type: 3}
+      propertyPath: minToAdd.attackSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8258606269566142307, guid: 76c0713560b5fb3468fbcc44e718f7bf, type: 3}
       propertyPath: pedestal
       value: 
@@ -5583,12 +5599,12 @@ MonoBehaviour:
     attackSpeed: 0
     AttackTime: 0
   minToAdd:
-    maxHealth: 100
+    maxHealth: 0
     currentHealth: 0
-    attackPower: 10
-    moveSpeed: 5
-    attackSpeed: 2
-    AttackTime: 1
+    attackPower: 0
+    moveSpeed: 0
+    attackSpeed: 0
+    AttackTime: 0
   maxToAdd:
     maxHealth: 0
     currentHealth: 0

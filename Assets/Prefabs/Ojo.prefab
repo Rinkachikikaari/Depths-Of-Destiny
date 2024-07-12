@@ -116,12 +116,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   normalDamage: 1
-  chargedDamage: 3
+  chargedDamage: 2
   attackRange: 4
-  chargeTime: 2
+  chargeTime: 3
   moveSpeed: 40
   chargeSpeed: 15
-  cooldownTime: 2
+  cooldownTime: 4
 --- !u!58 &4337143340676150461
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -134,10 +134,10 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 47
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 16
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -154,9 +154,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.20482731}
+  m_Offset: {x: 0.0010108948, y: 0.20482731}
   serializedVersion: 2
-  m_Radius: 0.29671574
+  m_Radius: 0.33408165
 --- !u!58 &3426878125065900311
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -169,10 +169,10 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 47
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 16
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -189,9 +189,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.2021141}
+  m_Offset: {x: -0.0050497055, y: 0.2021141}
   serializedVersion: 2
-  m_Radius: 0.2978859
+  m_Radius: 0.30091572
 --- !u!50 &2550084822198858078
 Rigidbody2D:
   serializedVersion: 4
