@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class Stats
@@ -41,6 +42,8 @@ public class CharacterStats : MonoBehaviour
         if (currentStats.currentHealth <= 0)
         {
             Die();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
         }
 
         if (hud != null)
@@ -62,7 +65,7 @@ public class CharacterStats : MonoBehaviour
 
     void Die()
     {
-        // Implementar lógica de muerte del personaje
+        // Implementar lï¿½gica de muerte del personaje
         Debug.Log("Character Died");
         MainStats = new Stats();
     }
