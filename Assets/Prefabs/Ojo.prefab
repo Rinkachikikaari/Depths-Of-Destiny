@@ -119,8 +119,8 @@ MonoBehaviour:
   chargedDamage: 2
   attackRange: 4
   chargeTime: 3
-  moveSpeed: 40
-  chargeSpeed: 15
+  moveSpeed: 5
+  chargeSpeed: 10
   cooldownTime: 4
 --- !u!58 &4337143340676150461
 CircleCollider2D:

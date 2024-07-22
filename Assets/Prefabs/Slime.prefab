@@ -103,10 +103,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  attackRange: 0
-  detectionRange: 20
-  moveSpeed: 15
-  attackCooldown: 1
+  detectionRange: 5
+  moveSpeed: 1
 --- !u!114 &8451482508988083992
 MonoBehaviour:
   m_ObjectHideFlags: 0

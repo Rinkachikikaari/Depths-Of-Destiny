@@ -22,6 +22,8 @@ public class PlayerAttack : MonoBehaviour
             isAttacking = true;
             animator.SetTrigger("Attack");
         }
+        animator.SetTrigger("NotAttack");
+
     }
 
     public void OnAttackEnd()

@@ -5490,6 +5490,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefabs:
   - {fileID: 5915845221308717598, guid: 3c7e13b1781948b4d87f3c25b3216aa9, type: 3}
+  - {fileID: 3868010220498434314, guid: d450eea8aa68e354f9b32cc3fa798e0f, type: 3}
   HeartPrefab: {fileID: 5483055270648785840, guid: 1bb56a492be0b5941b7b6e0995c4420f, type: 3}
   minEnemyCount: 1
   maxEnemyCount: 1

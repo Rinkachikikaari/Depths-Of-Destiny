@@ -5443,6 +5443,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefabs:
   - {fileID: 5915845221308717598, guid: 3c7e13b1781948b4d87f3c25b3216aa9, type: 3}
+  - {fileID: 3868010220498434314, guid: d450eea8aa68e354f9b32cc3fa798e0f, type: 3}
   HeartPrefab: {fileID: 5483055270648785840, guid: 1bb56a492be0b5941b7b6e0995c4420f, type: 3}
   minEnemyCount: 1
   maxEnemyCount: 1
@@ -5464,8 +5465,6 @@ MonoBehaviour:
   Map: {fileID: 5140532362101157932}
   originalColor: {r: 0.48235294, g: 0.4745098, b: 0.5294118, a: 1}
   Aqui: {r: 0.22248635, g: 0.1699448, b: 0.5377358, a: 1}
-  NextLevel: {fileID: 2151286904103517666}
-  PowerUp: {fileID: 4537641064748297937}
 --- !u!61 &1560132832093056257
 BoxCollider2D:
   m_ObjectHideFlags: 0

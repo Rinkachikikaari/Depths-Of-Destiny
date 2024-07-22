@@ -4,36 +4,47 @@ using UnityEngine;
 public class MeleeEnemy : MonoBehaviour
 {
     public int damage = 10;
-    public float attackRange = 2f;
     public float detectionRange = 10f;
     public float moveSpeed = 2f;
-    public float attackCooldown = 1f;
 
     private Transform player;
     private Rigidbody2D rb;
-    private bool isAttacking = false;
+    private Animator animator;
+    private Vector2 movementDirection;
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
     {
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
-        if (distanceToPlayer <= detectionRange && !isAttacking)
+        if (distanceToPlayer <= detectionRange)
         {
-            Vector2 direction = (player.position - transform.position).normalized;
-            rb.MovePosition(rb.position + direction * moveSpeed * Time.deltaTime);
+            movementDirection = (player.position - transform.position).normalized;
+            UpdateAnimation(movementDirection);
         }
-
-        if (distanceToPlayer <= attackRange && !isAttacking)
+        else
         {
-            StartCoroutine(Attack());
+            movementDirection = Vector2.zero;
+            animator.SetFloat("Horizontal", 0);
+            animator.SetFloat("Vertical", 0);
+            animator.SetFloat("Speed", 0);
         }
     }
+
+    private void FixedUpdate()
+    {
+        if (movementDirection != Vector2.zero)
+        {
+            rb.MovePosition(rb.position + movementDirection * moveSpeed * Time.fixedDeltaTime);
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -42,10 +53,10 @@ public class MeleeEnemy : MonoBehaviour
         }
     }
 
-    private IEnumerator Attack()
+    private void UpdateAnimation(Vector2 direction)
     {
-        isAttacking = true;
-        yield return new WaitForSeconds(attackCooldown);
-        isAttacking = false;
+        animator.SetFloat("Horizontal", direction.x);
+        animator.SetFloat("Vertical", direction.y);
+        animator.SetFloat("Speed", direction.sqrMagnitude);
     }
 }
