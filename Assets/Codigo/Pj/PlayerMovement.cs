@@ -10,6 +10,13 @@ public class PlayerMovement : MonoBehaviour
     private PlayerAttack playerAttack;
     public bool canTp = true;
 
+    public float dashSpeed = 20f; // Velocidad del dash
+    public float dashTime = 0.2f; // Duración del dash
+    public float dashCooldown = 1f; // Cooldown del dash
+    private bool isDashing;
+    private float dashTimeLeft;
+    private float dashCooldownTimeLeft;
+
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -22,7 +29,24 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!playerAttack.isAttacking) // Permitir movimiento solo si no está atacando
         {
-            MovePj();
+            if (isDashing)
+            {
+                dashTimeLeft -= Time.deltaTime;
+                if (dashTimeLeft <= 0)
+                {
+                    isDashing = false;
+                    dashCooldownTimeLeft = dashCooldown; // Inicia el cooldown después del dash
+                }
+            }
+            else
+            {
+                dashCooldownTimeLeft -= Time.deltaTime; // Disminuye el tiempo de cooldown
+                MovePj();
+                if (Input.GetKeyDown(KeyCode.Space) && mov != Vector2.zero && dashCooldownTimeLeft <= 0) // Botón de dash (barra espaciadora)
+                {
+                    StartDash();
+                }
+            }
         }
 
         if (Input.GetMouseButtonDown(0) && playerAttack.canAttack)
@@ -31,16 +55,23 @@ public class PlayerMovement : MonoBehaviour
             mov = Vector2.zero; // Detener el movimiento durante el ataque
             animator.SetFloat("Speed", 0); // Actualizar la animación a parado
         }
+
         if (Input.GetKeyDown(KeyCode.R))
         {
-            
+            // Aquí puedes agregar la funcionalidad que desees para la tecla R
         }
-
     }
 
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + mov * characterStats.currentStats.moveSpeed * Time.fixedDeltaTime);
+        if (isDashing)
+        {
+            rb.MovePosition(rb.position + mov * dashSpeed * Time.fixedDeltaTime);
+        }
+        else
+        {
+            rb.MovePosition(rb.position + mov * characterStats.currentStats.moveSpeed * Time.fixedDeltaTime);
+        }
     }
 
     void MovePj()
@@ -52,7 +83,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (mov != Vector2.zero)
         {
-            animator.SetFloat("Horizontal", hor == 0 ? 0 : hor < 0 ? -1 : 1 );
+            animator.SetFloat("Horizontal", hor == 0 ? 0 : hor < 0 ? -1 : 1);
             animator.SetFloat("Vertical", ver == 0 ? 0 : ver < 0 ? -1 : 1);
             animator.SetFloat("Speed", mov.sqrMagnitude);
         }
@@ -61,5 +92,12 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("Speed", 0);
             mov = Vector2.zero;
         }
+    }
+
+    void StartDash()
+    {
+        isDashing = true;
+        dashTimeLeft = dashTime;
+        animator.SetTrigger("Dash"); // Asumiendo que tienes una animación de dash
     }
 }

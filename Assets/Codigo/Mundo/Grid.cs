@@ -6,7 +6,6 @@ public class Grid : MonoBehaviour
 {
     private EnemySpawner enemySpawner;
     public GameObject Next;
-    public GameObject PowerUp;
 
     void Update()
     {
@@ -20,6 +19,5 @@ public class Grid : MonoBehaviour
     void Item()
     {
         Next.SetActive(true);
-        PowerUp.SetActive(true);
     }
 }
