@@ -17,4 +17,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Escena/Generacion 3.unity
     guid: c22281e70b6f1c340880306f91c4f41d
+  - enabled: 1
+    path: Assets/Escena/Generacion 4.unity
+    guid: 213ada6e90a3e384ba86d8674728d264
+  - enabled: 1
+    path: Assets/Escena/Win.unity
+    guid: 0f4d73db92a9dea44a83853f82a0d6eb
+  - enabled: 1
+    path: Assets/Escena/GameOver.unity
+    guid: 0e1ed8ca9ca37a64599ca074f1472884
+  - enabled: 1
+    path: Assets/Escena/Pause.unity
+    guid: 3f8181eb7ef4e7548821ab3176d99f4b
   m_configObjects: {}

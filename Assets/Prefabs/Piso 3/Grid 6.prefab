@@ -2084,7 +2084,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 4
-      m_TileSpriteIndex: 4
+      m_TileSpriteIndex: 7
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2094,7 +2094,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 6
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2104,7 +2104,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2159,22 +2159,22 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   m_TileSpriteArray:
-  - m_RefCount: 1
-    m_Data: {fileID: 1791069994, guid: 98f5e0929d4b6594ead4775a63d81b81, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 1053383013, guid: 98f5e0929d4b6594ead4775a63d81b81, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 1152119165, guid: 98f5e0929d4b6594ead4775a63d81b81, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 1916083030, guid: 98f5e0929d4b6594ead4775a63d81b81, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: 2053929422, guid: e22d0a701977a9a4cbad6b209f32f5c5, type: 3}
+    m_Data: {fileID: 1053383013, guid: 98f5e0929d4b6594ead4775a63d81b81, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 1256909445, guid: e22d0a701977a9a4cbad6b209f32f5c5, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 1791069994, guid: 98f5e0929d4b6594ead4775a63d81b81, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 2053929422, guid: e22d0a701977a9a4cbad6b209f32f5c5, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 6
     m_Data:
@@ -5263,6 +5263,10 @@ PrefabInstance:
       propertyPath: pedestal
       value: 
       objectReference: {fileID: 3456114931912007650}
+    - target: {fileID: 5279293956694164554, guid: 76c0713560b5fb3468fbcc44e718f7bf, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7958466654630213117, guid: 76c0713560b5fb3468fbcc44e718f7bf, type: 3}
       propertyPath: pedestal
       value: 

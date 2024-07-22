@@ -5257,6 +5257,10 @@ PrefabInstance:
       propertyPath: pedestal
       value: 
       objectReference: {fileID: 3456114931912007650}
+    - target: {fileID: 5279293956694164554, guid: 76c0713560b5fb3468fbcc44e718f7bf, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7958466654630213117, guid: 76c0713560b5fb3468fbcc44e718f7bf, type: 3}
       propertyPath: pedestal
       value: 

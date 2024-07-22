@@ -3,9 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public GameObject pauseMenuUI; // Arrastra aquí tu Panel del menú de pausa desde el inspector.
-    private bool isPaused = false;
-
     public Rigidbody2D rb;
     public Animator animator;
     private CharacterStats characterStats;
@@ -63,17 +60,6 @@ public class PlayerMovement : MonoBehaviour
         {
             // Aquí puedes agregar la funcionalidad que desees para la tecla R
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (isPaused)
-            {
-                Resume();
-            }
-            else
-            {
-                Pause();
-            }
-        }
     }
 
     void FixedUpdate()
@@ -113,18 +99,5 @@ public class PlayerMovement : MonoBehaviour
         isDashing = true;
         dashTimeLeft = dashTime;
         animator.SetTrigger("Dash"); // Asumiendo que tienes una animación de dash
-    }
-    public void Resume()
-    {
-        pauseMenuUI.SetActive(false);
-        Time.timeScale = 1f; // Reanuda el tiempo.
-        isPaused = false;
-    }
-
-    void Pause()
-    {
-        pauseMenuUI.SetActive(true);
-        Time.timeScale = 0f; // Pausa el tiempo.
-        isPaused = true;
     }
 }

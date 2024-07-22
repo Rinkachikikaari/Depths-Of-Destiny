@@ -225,11 +225,112 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4527696514519447097, guid: 2e5610d4b73a83d4cab970741f87edd8, type: 3}
   m_PrefabInstance: {fileID: 1910234245}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1335877999 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1509558773092647658, guid: 93fa36e9fd10eae41821be5a1ac90026, type: 3}
+  m_PrefabInstance: {fileID: 1616740283}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1358881040 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4055362964130057569, guid: 93fa36e9fd10eae41821be5a1ac90026, type: 3}
   m_PrefabInstance: {fileID: 1616740283}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &1358881041
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335877999}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d612026d66f9eb141b6bffc54791bff3, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1616740283
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -242,6 +343,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: Salas
       objectReference: {fileID: 0}
+    - target: {fileID: 1994480688899515101, guid: 93fa36e9fd10eae41821be5a1ac90026, type: 3}
+      propertyPath: roomPrefab
+      value: 
+      objectReference: {fileID: 7151234049885506679, guid: 14d62f910b2283746830f132a513ada5, type: 3}
+    - target: {fileID: 1994480688899515101, guid: 93fa36e9fd10eae41821be5a1ac90026, type: 3}
+      propertyPath: bossRoomPrefab
+      value: 
+      objectReference: {fileID: 7151234049885506679, guid: 3e89ca7c2ce76934bada437142b13e1b, type: 3}
+    - target: {fileID: 1994480688899515101, guid: 93fa36e9fd10eae41821be5a1ac90026, type: 3}
+      propertyPath: uniqueRoomPrefab
+      value: 
+      objectReference: {fileID: 7151234049885506679, guid: bace252e03d0ac04d99210c0796e046d, type: 3}
+    - target: {fileID: 1994480688899515101, guid: 93fa36e9fd10eae41821be5a1ac90026, type: 3}
+      propertyPath: roomPrefabs.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1994480688899515101, guid: 93fa36e9fd10eae41821be5a1ac90026, type: 3}
+      propertyPath: roomPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 7151234049885506679, guid: 881fc629e8584ae41be4e82181bf1a8f, type: 3}
+    - target: {fileID: 1994480688899515101, guid: 93fa36e9fd10eae41821be5a1ac90026, type: 3}
+      propertyPath: roomPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 7151234049885506679, guid: 0219d2eb7844c77408c777e62e307228, type: 3}
+    - target: {fileID: 1994480688899515101, guid: 93fa36e9fd10eae41821be5a1ac90026, type: 3}
+      propertyPath: roomPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 7151234049885506679, guid: 29af06efc7877c1458d48f312811ef79, type: 3}
+    - target: {fileID: 1994480688899515101, guid: 93fa36e9fd10eae41821be5a1ac90026, type: 3}
+      propertyPath: roomPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 7151234049885506679, guid: 82ed8fd85a10c794299be3285b0e8050, type: 3}
+    - target: {fileID: 1994480688899515101, guid: 93fa36e9fd10eae41821be5a1ac90026, type: 3}
+      propertyPath: roomPrefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 7151234049885506679, guid: 518f53cb84a41a04aba03650dbb62470, type: 3}
+    - target: {fileID: 1994480688899515101, guid: 93fa36e9fd10eae41821be5a1ac90026, type: 3}
+      propertyPath: roomPrefabs.Array.data[5]
+      value: 
+      objectReference: {fileID: 7151234049885506679, guid: 9192d38976ba48b4088abd9a53691181, type: 3}
     - target: {fileID: 4055362964130057569, guid: 93fa36e9fd10eae41821be5a1ac90026, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.82
@@ -288,7 +429,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4055362964130057569, guid: 93fa36e9fd10eae41821be5a1ac90026, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1886876398}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1509558773092647658, guid: 93fa36e9fd10eae41821be5a1ac90026, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1358881041}
   m_SourcePrefab: {fileID: 100100000, guid: 93fa36e9fd10eae41821be5a1ac90026, type: 3}
 --- !u!1 &1706858372 stripped
 GameObject:
@@ -773,7 +917,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1110187730257587339, guid: 30da9ca43c883fd4b8dd213893b04dab, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3452056568432519887, guid: 30da9ca43c883fd4b8dd213893b04dab, type: 3}
       propertyPath: m_Pivot.x
