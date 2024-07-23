@@ -4999,7 +4999,11 @@ MonoBehaviour:
   enemies: []
   spawnPoints: []
   spawnHeart: {fileID: 0}
-  doors: []
+  doors:
+  - {fileID: 1138457057628771435}
+  - {fileID: 7296169829869555459}
+  - {fileID: 8198554505944519568}
+  - {fileID: 5434279905515909399}
   noHayEnemigos: 1
   spawnedOnce: 0
   si: 0

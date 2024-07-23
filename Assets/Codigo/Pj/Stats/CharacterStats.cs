@@ -9,7 +9,7 @@ public class Stats
     public int currentHealth;
     public int attackPower = 10;
     public int moveSpeed = 5;
-    public float attackSpeed = 2;
+    public float attackSpeed = 0.5f;
     public float AttackTime = 1;
 }
 
@@ -78,14 +78,14 @@ public class CharacterStats : MonoBehaviour
         }
     }
 
-    void Die()
+    public void Die()
     {
         // Implementar l�gica de muerte del personaje
         Debug.Log("Character Died");
         MainStats = new Stats();
     }
 
-    void OnDestroy()
+    public void OnDestroy()
     {
         MainStats = currentStats;
     }

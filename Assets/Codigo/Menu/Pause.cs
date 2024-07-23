@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour
 {
-    public string overlaySceneName = "Pause"; // Nombre de la escena que quieres sobreponer
-    private bool isOverlayActive = false;
+    public GameObject pause;
+    public bool isOverlayActive = false;
 
     void Update()
     {
@@ -25,14 +25,14 @@ public class Pause : MonoBehaviour
 
     void LoadOverlayScene()
     {
-        SceneManager.LoadScene(overlaySceneName, LoadSceneMode.Additive);
+        pause.SetActive(true);
         isOverlayActive = true;
         Time.timeScale = 0f; // Pausa el tiempo.
     }
 
     void UnloadOverlayScene()
     {
-        SceneManager.UnloadSceneAsync(overlaySceneName);
+        pause.SetActive(false);
         isOverlayActive = false;
         Time.timeScale = 1f; // Reanuda el tiempo.
     }

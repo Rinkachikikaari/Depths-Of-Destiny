@@ -15,8 +15,16 @@ public class HeartPickup : MonoBehaviour
         CharacterStats stats = other.GetComponent<CharacterStats>();
         if (stats != null)
         {
-             stats.AddStats(statsToAdd);
-             Destroy(gameObject); // Destruir el item después de recogerlo
+            if (stats.currentStats.maxHealth > stats.currentStats.currentHealth)
+            {
+                stats.AddStats(statsToAdd);
+                Destroy(gameObject); // Destruir el item después de recogerlo
+            }
+            if (stats.currentStats.maxHealth < stats.currentStats.currentHealth)
+            {
+                stats.currentStats.currentHealth = stats.currentStats.maxHealth;
+            }
+
 
         }
     }
